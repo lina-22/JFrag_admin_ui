@@ -1,0 +1,17 @@
+.nav_items {
+  padding-top: 40px;
+}
+.nav_item {
+  padding: 25px 50px;
+  cursor: pointer;
+}
+.nav_item:hover {
+  background-color: rgb(1, 38, 69);
+}
+fa-icon {
+  margin-right: 20px;
+  font-size: 22px;
+}
+span {
+  display: inline;
+}
