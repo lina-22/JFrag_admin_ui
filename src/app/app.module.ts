@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
-import { HomeComponent } from './home/home.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { TopWidgetsComponent } from './top-widgets/top-widgets.component';
 import { SalesByMonthComponent } from './sales-by-month/sales-by-month.component';
@@ -23,7 +22,6 @@ import { ChartModule } from 'angular-highcharts';
     LoginComponent,
     HeaderComponent,
     ProductComponent,
-    HomeComponent,
     SideNavComponent,
     TopWidgetsComponent,
     SalesByMonthComponent,

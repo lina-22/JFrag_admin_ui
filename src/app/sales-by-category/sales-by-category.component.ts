@@ -32,6 +32,26 @@ export class SalesByCategoryComponent implements OnInit {
             y: 41.0,
             color: '#044342',
           },
+          {
+            name: 'Lilium',
+            y: 15.0,
+            color: '#044342',
+          },
+          {
+            name: 'Parfume',
+            y: 3.5,
+            color: '#ed9e20',
+          },
+          {
+            name: 'Parfume',
+            y: 41.0,
+            color: '#6920fb',
+          },
+          {
+            name: 'Parfume',
+            y: 6.5,
+            color: '#121212',
+          },
         ],
       },
     ],
