@@ -19,6 +19,7 @@ import { GetProductComponent } from './components/product/get-product/get-produc
 import { CategoryComponent } from './components/category/category.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,13 @@ import { DeleteProductComponent } from './components/product/delete-product/dele
     EditProductComponent,
     DeleteProductComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule, ChartModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    ChartModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

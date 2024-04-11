@@ -1,1 +1,25 @@
-<p>get-product works!</p>
+<table>
+  <caption>
+    Product List 2024
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Views</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productData">
+      <th scope="row">{{ product.id }}</th>
+      <td>{{ product.name }}</td>
+      <td>{{ product.views }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row" colspan="2">Average product</th>
+      <td>33</td>
+    </tr>
+  </tfoot>
+</table>
