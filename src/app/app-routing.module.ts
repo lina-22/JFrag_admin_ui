@@ -5,14 +5,16 @@ import { AddProductComponent } from './components/product/add-product/add-produc
 import { GetProductComponent } from './components/product/get-product/get-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
   // { path: 'login', component: LoginComponent },
-  // { path: 'product', component: ProductComponent },
+
   // { path: '**', component: LoginComponent },
-  { path: 'product/add', component: AddProductComponent },
+  // { path: '/', component: MainComponent },
   { path: 'product/get', component: GetProductComponent },
+  { path: 'product/add', component: AddProductComponent },
   { path: 'product/edit', component: EditProductComponent },
   { path: 'product/delete', component: DeleteProductComponent },
 ];
