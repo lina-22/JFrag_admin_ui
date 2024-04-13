@@ -1,5 +1,11 @@
 .all_products {
+  background-color: skyblue;
   display: flex;
+  width: 1280px;
+}
+.all_products div {
+  width: 1280px;
+  background-color: yellow;
 }
 table {
   border-collapse: collapse;
@@ -7,12 +13,16 @@ table {
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
+  width: 100%;
+  background-color: green;
 }
 
 caption {
-  caption-side: bottom;
+  /* caption-side: bottom; */
   padding: 10px;
   font-weight: bold;
+  width: 100%;
+  background-color: red;
 }
 
 thead,
@@ -40,4 +50,9 @@ tfoot th {
 
 tfoot td {
   font-weight: bold;
+}
+
+img {
+  width: 100px;
+  height: 80px;
 }

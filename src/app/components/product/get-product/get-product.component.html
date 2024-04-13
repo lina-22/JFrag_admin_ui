@@ -9,6 +9,7 @@
           <th scope="col">Id</th>
           <th scope="col">Product Name</th>
           <th scope="col">Views</th>
+          <th scope="col">Image</th>
         </tr>
       </thead>
       <tbody>
@@ -16,11 +17,12 @@
           <th scope="row">{{ product.id }}</th>
           <td>{{ product.name }}</td>
           <td>{{ product.views }}</td>
+          <td><img [src]="product.imagePath" alt="" /></td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <th scope="row" colspan="2">Average product</th>
+          <th scope="row" colspan="3">Average product</th>
           <td>33</td>
         </tr>
       </tfoot>
