@@ -5,7 +5,7 @@ import { AddProductComponent } from './components/product/add-product/add-produc
 import { GetProductComponent } from './components/product/get-product/get-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './dashbord/main/main.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
