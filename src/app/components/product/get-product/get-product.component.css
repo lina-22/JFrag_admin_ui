@@ -1,11 +1,11 @@
 .all_products {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   display: flex;
   width: 1280px;
 }
 .all_products div {
   width: 1280px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 table {
   border-collapse: collapse;
@@ -14,7 +14,7 @@ table {
   font-size: 0.8rem;
   letter-spacing: 1px;
   width: 100%;
-  background-color: green;
+  /*👉  background-color: green;👈*/
 }
 
 caption {
@@ -22,7 +22,7 @@ caption {
   padding: 10px;
   font-weight: bold;
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
 }
 
 thead,
