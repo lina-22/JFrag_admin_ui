@@ -20,6 +20,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     FontAwesomeModule,
     ChartModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
