@@ -1,13 +1,23 @@
 <div class="form_template">
   <div class="wrapper">
-    <form action="">
+    <form [formGroup]="addProduct">
       <h1>New Product Add</h1>
       <div class="input_box">
         <div class="input_field">
-          <input type="text" placeholder="Product Name" required />
+          <input
+            type="text"
+            placeholder="Product Name"
+            required
+            formControlName="productName"
+          />
         </div>
         <div class="input_field">
-          <input type="text" placeholder="Product Description" required />
+          <input
+            type="text"
+            placeholder="Product Description"
+            required
+            formControlName="productDescription"
+          />
         </div>
         <div class="input_field">
           <input type="text" placeholder="Product Image" />
