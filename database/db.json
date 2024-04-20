@@ -29,6 +29,42 @@
       "name": "another name",
       "views": 200,
       "imagePath": "assets/lilium.png"
+    },
+    {
+      "id": "62ef",
+      "name": "another test",
+      "views": 210,
+      "imagePath": "assets/lilium.png"
+    },
+    {
+      "id": "3958",
+      "productName": "Test33",
+      "productDescription": "Test des...",
+      "productViews": ""
+    },
+    {
+      "id": "27ac",
+      "productName": "hello",
+      "productDescription": "hello test...",
+      "productViews": "250"
+    },
+    {
+      "id": "7959",
+      "productName": "Test",
+      "productDescription": "",
+      "productViews": "1245"
+    },
+    {
+      "id": "7e4e",
+      "productName": "test",
+      "productDescription": "",
+      "productViews": ""
+    },
+    {
+      "id": "71b4",
+      "productName": "test23",
+      "productDescription": "",
+      "productViews": ""
     }
   ]
 }

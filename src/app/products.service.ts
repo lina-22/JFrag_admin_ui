@@ -10,4 +10,9 @@ export class ProductsService {
   getAllProduct() {
     return this.http.get(this.url);
   }
+
+  saveProductData(data: any) {
+    console.log(data);
+    return this.http.post(this.url, data);
+  }
 }

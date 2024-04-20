@@ -1,10 +1,14 @@
 .all_products {
-  /* background-color: skyblue; */
+  /* background-color: rgb(235, 202, 135); */
   display: flex;
-  width: 1280px;
+  width: 100%;
+  justify-content: center;
+  /* max-width: 1280px; */
 }
 .all_products div {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
+  /* text-align: center; */
   /* background-color: yellow; */
 }
 table {
@@ -14,7 +18,7 @@ table {
   font-size: 0.8rem;
   letter-spacing: 1px;
   width: 100%;
-  /*👉  background-color: green;👈*/
+  /* background-color: green; */
 }
 
 caption {
@@ -22,14 +26,19 @@ caption {
   padding: 10px;
   font-weight: bold;
   width: 100%;
+  max-width: 1280px;
   /* background-color: red; */
 }
 
 thead,
+tbody,
 tfoot {
   background-color: rgb(228 240 245);
 }
 
+/*👉.p_id {
+  background-color: cadetblue;
+}👈*/
 th,
 td {
   border: 1px solid rgb(160 160 160);
@@ -55,4 +64,22 @@ tfoot td {
 img {
   width: 100px;
   height: 80px;
+}
+
+/* ------------Media queries------------------ */
+
+@media only screen and (max-width: 600px) {
+  /* Menu burgger to do */
+  .all_products {
+    width: 200px;
+    background-color: blueviolet;
+  }
+  .all_products div {
+    width: 200px;
+    background-color: blueviolet;
+  }
+  .all_products div table {
+    width: 200px;
+    background-color: blueviolet;
+  }
 }

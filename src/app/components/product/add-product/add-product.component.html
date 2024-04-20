@@ -1,32 +1,39 @@
 <div class="form_template">
-  <div class="wrapper">
-    <form [formGroup]="addProduct">
-      <h1>New Product Add</h1>
-      <div class="input_box">
-        <div class="input_field">
-          <input
-            type="text"
-            placeholder="Product Name"
-            required
-            formControlName="productName"
-          />
-        </div>
-        <div class="input_field">
+  <div>
+    <div class="wrapper">
+      <form [formGroup]="addProduct" (ngSubmit)="SaveData()">
+        <h3>New Product Add</h3>
+        <div class="input_box">
+          <div class="input_field">
+            <input
+              type="text"
+              placeholder="Product Name"
+              required
+              formControlName="productName"
+            />
+          </div>
+          <!-- <div class="input_field">
           <input
             type="text"
             placeholder="Product Description"
             required
             formControlName="productDescription"
           />
+        </div> -->
+          <div class="input_field">
+            <input
+              type="text"
+              placeholder="Product Views"
+              required
+              formControlName="productViews"
+            />
+          </div>
+          <div class="input_field">
+            <input type="text" placeholder="Product Image" />
+          </div>
         </div>
-        <div class="input_field">
-          <input type="text" placeholder="Product Image" />
-        </div>
-        <div class="input_field">
-          <input type="text" placeholder="Product Image" />
-        </div>
-      </div>
-      <button type="submit" class="btn">Submit</button>
-    </form>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
   </div>
 </div>
