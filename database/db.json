@@ -2,45 +2,45 @@
   "products": [
     {
       "id": "1",
-      "name": "a name",
-      "views": 100,
+      "productName": "a name",
+      "productViews": 100,
       "imagePath": "assets/lilium.png"
     },
     {
       "id": "2",
-      "name": "another name",
-      "views": 200,
+      "productName": "another name",
+      "productViews": 200,
       "imagePath": "assets/desert.png"
     },
     {
       "id": "3",
-      "name": "another name",
-      "views": 200,
+      "productName": "another name",
+      "productViews": 200,
       "imagePath": "assets/lilium.png"
     },
     {
       "id": "4",
-      "name": "another name",
-      "views": 200,
+      "productName": "another name",
+      "productViews": 200,
       "imagePath": "assets/desert.png"
     },
     {
       "id": "5",
-      "name": "another name",
-      "views": 200,
+      "productName": "another name",
+      "productViews": 200,
       "imagePath": "assets/lilium.png"
     },
     {
       "id": "62ef",
-      "name": "another test",
-      "views": 210,
+      "productName": "another test",
+      "productViews": 210,
       "imagePath": "assets/lilium.png"
     },
     {
       "id": "3958",
       "productName": "Test33",
       "productDescription": "Test des...",
-      "productViews": ""
+      "productViews": "235"
     },
     {
       "id": "27ac",
@@ -58,30 +58,66 @@
       "id": "7e4e",
       "productName": "test",
       "productDescription": "",
-      "productViews": ""
+      "productViews": "36"
     },
     {
       "id": "71b4",
       "productName": "test23",
       "productDescription": "",
-      "productViews": ""
+      "productViews": "123"
     },
     {
       "id": "a69a",
       "productName": "test",
       "productDescription": "",
-      "productViews": ""
+      "productViews": "123"
     },
     {
       "id": "22c5",
       "productName": "test",
       "productDescription": "",
-      "productViews": ""
+      "productViews": "258"
     },
     {
       "id": "5f14",
       "productName": "Test....",
       "productViews": "200",
+      "productImage": ""
+    },
+    {
+      "id": "39e8",
+      "productName": "",
+      "productViews": "",
+      "productImage": ""
+    },
+    {
+      "id": "14fc",
+      "productName": "",
+      "productViews": "",
+      "productImage": ""
+    },
+    {
+      "id": "d63d",
+      "productName": "MLM",
+      "productViews": "36",
+      "productImage": ""
+    },
+    {
+      "id": "95bc",
+      "productName": "mp",
+      "productViews": "9897",
+      "productImage": ""
+    },
+    {
+      "id": "22db",
+      "productName": "mpmp",
+      "productViews": "456",
+      "productImage": ""
+    },
+    {
+      "id": "4553",
+      "productName": "reytui",
+      "productViews": "5456",
       "productImage": ""
     }
   ]

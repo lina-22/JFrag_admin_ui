@@ -15,8 +15,8 @@
       <tbody>
         <tr *ngFor="let product of productData">
           <th scope="row">{{ product.id }}</th>
-          <td>{{ product.name }}</td>
-          <td>{{ product.views }}</td>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.productViews }}</td>
           <td><img [src]="product.imagePath" alt="" /></td>
         </tr>
       </tbody>

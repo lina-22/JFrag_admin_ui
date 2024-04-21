@@ -1,4 +1,3 @@
-// import { ProductsService } from './../../../products.service';
 import { ProductsService } from '../../../service/product_service/products.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -16,12 +15,19 @@ export class AddProductComponent implements OnInit, OnDestroy {
     productViews: new FormControl(''),
     productImage: new FormControl(''),
   });
+  message: boolean = false;
   ngOnInit(): void {}
   ngOnDestroy(): void {}
   SaveData() {
     // console.log(this.addProduct.value);
     this.product.saveProductData(this.addProduct.value).subscribe((result) => {
       console.log(result);
+      this.message = true;
+      this.addProduct.reset({});
     });
+  }
+
+  removeMessage() {
+    this.message = false;
   }
 }
