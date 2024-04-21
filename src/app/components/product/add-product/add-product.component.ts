@@ -1,4 +1,5 @@
-import { ProductsService } from './../../../products.service';
+// import { ProductsService } from './../../../products.service';
+import { ProductsService } from '../../../service/product_service/products.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
@@ -12,8 +13,8 @@ export class AddProductComponent implements OnInit, OnDestroy {
 
   addProduct = new FormGroup({
     productName: new FormControl(''),
-    productDescription: new FormControl(''),
     productViews: new FormControl(''),
+    productImage: new FormControl(''),
   });
   ngOnInit(): void {}
   ngOnDestroy(): void {}
