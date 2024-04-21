@@ -15,4 +15,12 @@ export class GetProductComponent implements OnInit {
       this.productData = allData;
     });
   }
+
+  deleteProduct(product_id: any) {
+    // console.log(product_id);
+    this.products.deleteProductData(product_id).subscribe((result) => {
+      console.log(result);
+      this.ngOnInit();
+    });
+  }
 }

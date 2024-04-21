@@ -10,6 +10,7 @@
           <th scope="col">Product Name</th>
           <th scope="col">Views</th>
           <th scope="col">Image</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
@@ -18,6 +19,8 @@
           <td>{{ product.productName }}</td>
           <td>{{ product.productViews }}</td>
           <td><img [src]="product.imagePath" alt="" /></td>
+          <td><span (click)="deleteProduct(product.id)">Delete</span></td>
+          <!-- <td><span>Delete</span></td> -->
         </tr>
       </tbody>
       <tfoot>
