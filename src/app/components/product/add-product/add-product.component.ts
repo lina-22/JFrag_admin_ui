@@ -24,6 +24,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
       console.log(result);
       this.message = true;
       this.addProduct.reset({});
+      const newProductId = this.product.getNextId();
     });
   }
 

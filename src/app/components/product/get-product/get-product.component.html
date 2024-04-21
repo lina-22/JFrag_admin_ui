@@ -19,8 +19,13 @@
           <td>{{ product.productName }}</td>
           <td>{{ product.productViews }}</td>
           <td><img [src]="product.imagePath" alt="" /></td>
-          <td><span (click)="deleteProduct(product.id)">Delete</span></td>
-          <!-- <td><span>Delete</span></td> -->
+          <td>
+            <i (click)="deleteProduct(product.id)" class="fa fa-trash"></i>
+            &nbsp;
+            <a routerLink="/product/edit/{{ product.id }}"
+              ><i class="fa fa-edit"></i
+            ></a>
+          </td>
         </tr>
       </tbody>
       <tfoot>

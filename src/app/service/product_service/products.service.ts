@@ -11,6 +11,11 @@ export class ProductsService {
     return this.http.get(this.url);
   }
 
+  private lastId: number = 0;
+  getNextId(): number {
+    // Increment the last used ID and return it
+    return ++this.lastId;
+  }
   saveProductData(data: any) {
     console.log(data);
     return this.http.post(this.url, data);
