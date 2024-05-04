@@ -9,9 +9,12 @@
   /* border: 2px solid rgb(255, 0, 255); */
 }
 .logo {
-  font-weight: bold;
-  font-size: 20px;
-  /* border: 2px solid red; */
+  /* font-weight: bold; */
+  /* font-size: 20px; */
+  border: 2px solid red;
+}
+.logo i {
+  height: 160px;
 }
 .user_info {
   display: flex;
@@ -34,4 +37,91 @@
   justify-content: center;
   font-weight: bold;
   margin-top: -15px;
+}
+
+/* <!-- working for menu burger --> */
+/* nav-toggle */
+.nav-toggle {
+  height: 32px;
+  width: 44px;
+  background-color: #fff;
+  display: none;
+}
+
+.nav-toggle:focus {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.nav-toggle span {
+  height: 2px;
+  width: 20px;
+  background-color: black;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.nav-toggle span::after,
+.nav-toggle span::before {
+  position: absolute;
+  content: "";
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-toggle span::after {
+  transform: translateY(-6px);
+}
+.nav-toggle span::before {
+  transform: translateY(6px);
+}
+/* <!-- working for menu burger end --> */
+
+@media (max-width: 992px) {
+  /* <!-- working for menu burger --> */
+  /* nav-toggle */
+  .nav-toggle {
+    height: 32px;
+    width: 44px;
+    background-color: #fff;
+    display: block;
+    /*👉  padding-top: -200px;👈*/
+    margin-top: -165px;
+    margin-left: 80px;
+  }
+
+  .nav-toggle:focus {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  }
+
+  .nav-toggle span {
+    height: 2px;
+    width: 20px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    position: relative;
+  }
+
+  .nav-toggle span::after,
+  .nav-toggle span::before {
+    position: absolute;
+    content: "";
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-toggle span::after {
+    transform: translateY(-6px);
+  }
+  .nav-toggle span::before {
+    transform: translateY(6px);
+  }
+  /* <!-- working for menu burger end --> */
 }

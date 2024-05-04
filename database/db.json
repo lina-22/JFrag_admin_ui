@@ -35,18 +35,6 @@
       "productName": "another test",
       "productViews": 210,
       "imagePath": "assets/lilium.png"
-    },
-    {
-      "id": "27ac",
-      "productName": "hello",
-      "productDescription": "hello test...",
-      "productViews": "250"
-    },
-    {
-      "id": "3e21",
-      "productName": "vhjvjh",
-      "productViews": "63526",
-      "productImage": ""
     }
   ]
 }
