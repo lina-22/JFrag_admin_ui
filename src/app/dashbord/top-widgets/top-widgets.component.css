@@ -2,6 +2,11 @@
   border: 2px solid red;
   display: flex;
 }
+.widget_container {
+  /*👉 max-width: 400px;👈*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 .widget {
   border: 2px solid rgb(166, 255, 0);
   display: flex;
@@ -43,4 +48,42 @@
 
 .bottom {
   font-size: 20px;
+}
+
+@media (max-width: 992px) {
+  .widget {
+    max-width: 275px;
+  }
+  .widget_container {
+    max-width: 580px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(50, 50, 70);
+  }
+}
+@media (max-width: 600px) {
+  .widget_container {
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: blue;
+  }
+  .widget {
+    width: 120px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  fa-icon {
+    font-size: 30px;
+  }
+
+  .value {
+    background-color: rgb(2, 14, 24);
+    text-align: center;
+    width: 100px;
+  }
+
+  .value div {
+    font-size: 12px;
+  }
 }

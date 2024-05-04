@@ -31,6 +31,9 @@
 
 /* menu burger start*/
 @media (max-width: 992px) {
+  .main {
+    padding: 0;
+  }
   .side_nav {
     width: 150px;
     /* min-width: 230px; */
@@ -41,6 +44,9 @@
   }
 }
 @media (max-width: 600px) {
+  .main {
+    padding: 0;
+  }
   .side_nav {
     width: 78px;
     /* min-width: 230px; */
