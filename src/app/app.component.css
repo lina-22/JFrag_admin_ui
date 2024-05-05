@@ -14,6 +14,7 @@
   background-color: #113c60;
   color: #fff;
   box-shadow: 5px 5px 5px #939393;
+  display: block;
 }
 
 .main {
@@ -26,29 +27,39 @@
 
 /* menu burger start*/
 @media (max-width: 992px) {
-  .main {
-    padding: 0;
+  .main_container {
+    position: relative;
   }
   .side_nav {
-    display: none;
-    width: 150px;
-    min-height: calc(100vh - 70px);
-    background-color: #113c60;
-    color: #fff;
-    box-shadow: 5px 5px 5px #939393;
+    position: absolute;
+    z-index: 1;
+  }
+  .main {
+    position: absolute;
+    background-color: red;
+    padding: 0;
+    width: 100%;
+    max-width: 950px;
   }
 }
 @media (max-width: 600px) {
-  .main {
-    padding: 0;
+  .main_container {
+    position: relative;
   }
   .side_nav {
-    display: none;
-    width: 78px;
-    min-height: calc(100vh - 70px);
-    background-color: #113c60;
-    color: #fff;
-    box-shadow: 5px 5px 5px #939393;
+    position: absolute;
+    z-index: 1;
+  }
+  .main {
+    position: absolute;
+    background-color: red;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    left: 0;
+    right: 0;
+    margin: auto; /* Center horizontally */
+    text-align: center;
   }
 }
 /* menu burger start end*/

@@ -49,24 +49,22 @@
 
 @media (max-width: 992px) {
   .widget {
-    max-width: 275px;
+    width: 100%;
+    max-width: 350px;
   }
   .widget_container {
-    max-width: 580px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 600px) {
   .widget_container {
-    max-width: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   .widget {
-    width: 120px;
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 150px;
   }
   fa-icon {
     font-size: 30px;

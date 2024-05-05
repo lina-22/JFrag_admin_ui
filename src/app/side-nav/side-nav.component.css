@@ -22,46 +22,9 @@ a {
 
 /* menu burger start*/
 @media (max-width: 992px) {
-  .nav_item {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 0;
-    overflow: hidden;
-    visibility: hidden;
-  }
-
-  .nav_item.open {
-    visibility: visible;
-  }
-  fa-icon {
-    font-size: 14px;
-  }
-  .nav_item {
-    font-size: 10px;
-  }
 }
 /* menu burger start end*/
 /* menu burger start*/
 @media (max-width: 600px) {
-  .nav_item {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 0;
-    overflow: hidden;
-    /* visibility: hidden; */
-  }
-
-  .nav_item.open {
-    visibility: visible;
-  }
-  fa-icon {
-    font-size: 10px;
-  }
-  .nav_item {
-    font-size: 8px;
-  }
-  /*👉 .main_container {
-    background-color: aqua;
-  }👈*/
 }
 /* menu burger start end*/

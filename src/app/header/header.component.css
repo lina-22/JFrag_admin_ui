@@ -6,6 +6,8 @@
   display: flex;
   justify-content: space-between;
   box-shadow: 5px 5px 5px #939393;
+  width: 100%;
+  max-width: 2200px;
 }
 
 .logo i {
@@ -33,109 +35,18 @@
 }
 
 /* <!-- working for menu burger --> */
-/* nav-toggle */
-.nav-toggle {
-  height: 32px;
-  width: 44px;
-  background-color: #fff;
-  display: none;
-}
-
-.nav-toggle:focus {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-}
-
-.nav-toggle span {
-  height: 2px;
-  width: 20px;
-  background-color: black;
-  display: block;
-  margin: auto;
-  position: relative;
-}
-
-.nav-toggle span::after,
-.nav-toggle span::before {
-  position: absolute;
-  content: "";
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.nav-toggle span::after {
-  transform: translateY(-6px);
-}
-.nav-toggle span::before {
-  transform: translateY(6px);
-}
-/* <!-- working for menu burger end --> */
 
 @media (max-width: 992px) {
   /* <!-- working for menu burger --> */
 
   .header {
-    max-width: 500px;
+    max-width: 100%;
   }
-  /* nav-toggle */
-  .nav-toggle {
-    height: 32px;
-    width: 44px;
-    background-color: #fff;
-    display: block;
-    /*👉  padding-top: -200px;👈*/
-    margin-top: -165px;
-    margin-left: 80px;
-  }
-
-  .nav-toggle:focus {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-  }
-
-  .nav-toggle span {
-    height: 2px;
-    width: 20px;
-    background-color: black;
-    display: block;
-    margin: auto;
-    position: relative;
-  }
-
-  .nav-toggle span::after,
-  .nav-toggle span::before {
-    position: absolute;
-    content: "";
-    background-color: black;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  .nav-toggle span::after {
-    transform: translateY(-6px);
-  }
-  .nav-toggle span::before {
-    transform: translateY(6px);
-  }
-  /* <!-- working for menu burger end --> */
-}
-
-@media (max-width: 992px) {
-  /* <!-- working for menu burger --> */
-
-  /*👉  .header {
-    border: 5px solid greenyellow;
-    width: 100%;
-    max-width: 300px;
-  }👈*/
 }
 @media (max-width: 600px) {
   /* <!-- working for menu burger --> */
 
   .header {
-    width: 100%;
+    max-width: 100%;
   }
 }

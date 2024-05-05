@@ -6,9 +6,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  @Output() toggleNav: EventEmitter<void> = new EventEmitter<void>();
-
+  @Output() isNav: EventEmitter<boolean> = new EventEmitter<boolean>();
+  togglerMenu = false;
   onToggleNav() {
-    this.toggleNav.emit();
+    this.togglerMenu = !this.togglerMenu;
+    this.isNav.emit(this.togglerMenu);
   }
 }

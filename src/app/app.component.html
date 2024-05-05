@@ -1,9 +1,9 @@
 <div class="container">
   <div class="header">
-    <app-header></app-header>
+    <app-header (isNav)="openSideNav($event)"></app-header>
   </div>
   <div class="main_container">
-    <div class="side_nav">
+    <div *ngIf="sideNav" class="side_nav">
       <app-side-nav></app-side-nav>
     </div>
     <div class="main">

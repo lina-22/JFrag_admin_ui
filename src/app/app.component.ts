@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
+  sideNav = false;
+  openSideNav($param: any) {
+    this.sideNav = $param;
+    console.log($param);
+  }
   title = 'jfrag_admin_ui';
 }
