@@ -22,16 +22,32 @@ export class EditProductComponent implements OnInit, OnDestroy {
   message: boolean = false;
   ngOnInit(): void {
     console.log(this.router.snapshot.params['id']);
+    this.product
+      .getProductById(this.router.snapshot.params['id'])
+      .subscribe((result: any) => {
+        console.log(result);
+        this.editProduct = new FormGroup({
+          productName: new FormControl(result['productName']),
+          productViews: new FormControl(result['productViews']),
+          productImage: new FormControl(result['productImage']),
+        });
+      });
   }
   ngOnDestroy(): void {}
-  updateData() {
-    // console.log(this.addProduct.value);
-    this.product.saveProductData(this.editProduct.value).subscribe((result) => {
-      console.log(result);
-      this.message = true;
-      this.editProduct.reset({});
-      const newProductId = this.product.getNextId();
-    });
+  UpdateData() {
+    console.log(this.editProduct.value);
+    this.product
+      .updateProductData(
+        this.router.snapshot.params['id'],
+        this.editProduct.value
+      )
+      .subscribe((result) => {
+        console.log(result);
+        // console.log(this.editProduct.value);
+        this.message = true;
+        // this.editProduct.reset({});
+        // const newProductId = this.product.getNextId();
+      });
   }
 
   removeMessage() {

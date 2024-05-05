@@ -20,6 +20,14 @@ export class ProductsService {
     console.log(data);
     return this.http.post(this.url, data);
   }
+  getProductById(id: any) {
+    // console.log(data);
+    return this.http.get(`${this.url}/${id}`);
+  }
+  updateProductData(id: any, data: any) {
+    // console.log(data);
+    return this.http.put(`${this.url}/${id}`, data);
+  }
   deleteProductData(id: any) {
     // console.log(data);
     return this.http.delete(`${this.url}/${id}`);
