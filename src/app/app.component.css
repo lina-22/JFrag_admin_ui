@@ -7,13 +7,9 @@
 .main_container {
   display: grid;
   grid-template-columns: 1fr 6fr;
-  /*👉  width: 100%;👈*/
-  /* background-color: red; */
 }
 
 .side_nav {
-  /*👉width: 350px;
-  min-width: 230px;👈*/
   min-height: calc(100vh - 70px);
   background-color: #113c60;
   color: #fff;
@@ -21,7 +17,6 @@
 }
 
 .main {
-  /* background-color: aqua; */
   padding: 30px;
   max-width: 100%;
 }
@@ -35,8 +30,8 @@
     padding: 0;
   }
   .side_nav {
+    display: none;
     width: 150px;
-    /* min-width: 230px; */
     min-height: calc(100vh - 70px);
     background-color: #113c60;
     color: #fff;
@@ -48,8 +43,8 @@
     padding: 0;
   }
   .side_nav {
+    display: none;
     width: 78px;
-    /* min-width: 230px; */
     min-height: calc(100vh - 70px);
     background-color: #113c60;
     color: #fff;

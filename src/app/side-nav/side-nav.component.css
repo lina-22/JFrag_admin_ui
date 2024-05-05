@@ -34,7 +34,6 @@ a {
     visibility: visible;
   }
   fa-icon {
-    background-color: red;
     font-size: 14px;
   }
   .nav_item {
@@ -56,11 +55,13 @@ a {
     visibility: visible;
   }
   fa-icon {
-    background-color: red;
     font-size: 10px;
   }
   .nav_item {
     font-size: 8px;
   }
+  /*👉 .main_container {
+    background-color: aqua;
+  }👈*/
 }
 /* menu burger start end*/

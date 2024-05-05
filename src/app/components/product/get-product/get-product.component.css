@@ -1,15 +1,11 @@
 .all_products {
-  /* background-color: rgb(235, 202, 135); */
   display: flex;
   width: 100%;
   justify-content: center;
-  /* max-width: 1280px; */
 }
 .all_products div {
   width: 100%;
   max-width: 1280px;
-  /* text-align: center; */
-  /* background-color: yellow; */
 }
 table {
   border-collapse: collapse;
@@ -18,16 +14,13 @@ table {
   font-size: 0.8rem;
   letter-spacing: 1px;
   width: 100%;
-  /* background-color: green; */
 }
 
 caption {
-  /* caption-side: bottom; */
   padding: 10px;
   font-weight: bold;
   width: 100%;
   max-width: 1280px;
-  /* background-color: red; */
 }
 
 thead,
@@ -68,18 +61,26 @@ img {
 
 /* ------------Media queries------------------ */
 
-@media only screen and (max-width: 600px) {
-  /* Menu burgger to do */
+@media only screen and (max-width: 992px) {
   .all_products {
-    width: 200px;
-    background-color: blueviolet;
+    width: 100%;
+    max-width: 900px;
   }
   .all_products div {
     width: 200px;
-    background-color: blueviolet;
   }
   .all_products div table {
     width: 200px;
-    background-color: blueviolet;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .all_products {
+    width: 100px;
+  }
+  .all_products div {
+    width: 100px;
+  }
+  .all_products div table {
+    width: 100px;
   }
 }

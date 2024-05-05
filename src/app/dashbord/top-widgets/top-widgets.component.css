@@ -1,14 +1,11 @@
 .widget_container {
-  border: 2px solid red;
   display: flex;
 }
 .widget_container {
-  /*👉 max-width: 400px;👈*/
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .widget {
-  border: 2px solid rgb(166, 255, 0);
   display: flex;
   align-items: space-between;
   width: 325px;
@@ -58,7 +55,6 @@
     max-width: 580px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: rgb(50, 50, 70);
   }
 }
 @media (max-width: 600px) {
@@ -66,7 +62,6 @@
     max-width: 300px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: blue;
   }
   .widget {
     width: 120px;
@@ -78,7 +73,6 @@
   }
 
   .value {
-    background-color: rgb(2, 14, 24);
     text-align: center;
     width: 100px;
   }

@@ -35,6 +35,12 @@
       "productName": "another test",
       "productViews": 210,
       "imagePath": "assets/lilium.png"
+    },
+    {
+      "id": "c57a",
+      "productName": "juhjhj",
+      "productViews": "jhhjj",
+      "productImage": ""
     }
   ]
 }
