@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   faDashboard,
   faLocation,
@@ -15,7 +15,7 @@ import {
   templateUrl: './side-nav.component.html',
   styleUrl: './side-nav.component.css',
 })
-export class SideNavComponent implements OnInit {
+export class SideNavComponent {
   faDashboard = faDashboard;
   faLocation = faLocation;
   faShop = faShop;
@@ -25,12 +25,7 @@ export class SideNavComponent implements OnInit {
   faContactBook = faContactBook;
   faHand = faHand;
 
-  constructor() {}
-  ngOnInit(): void {}
-
-  navOpened: boolean = false;
-
-  toggleNav() {
-    this.navOpened = !this.navOpened;
+  onMenuClick() {
+    console.log('menu clicked...');
   }
 }

@@ -1,5 +1,6 @@
 .nav_items {
   padding-top: 40px;
+  display: block;
 }
 .nav_item {
   padding: 25px 50px;

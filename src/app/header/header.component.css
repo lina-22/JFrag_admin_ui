@@ -9,9 +9,13 @@
   width: 100%;
   max-width: 2200px;
 }
+.logo {
+  display: flex;
+  gap: 1em;
+}
 
-.logo i {
-  height: 160px;
+.logo_btn {
+  display: none;
 }
 .user_info {
   display: flex;
@@ -38,6 +42,9 @@
 
 @media (max-width: 992px) {
   /* <!-- working for menu burger --> */
+  .logo_btn {
+    display: block;
+  }
 
   .header {
     max-width: 100%;
