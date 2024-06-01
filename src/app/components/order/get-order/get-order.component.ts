@@ -1,4 +1,5 @@
-import DataTables from 'datatables.net';
+// import { DataTables } from 'datatables.net';
+// import { Settings } from 'datatables.net';
 import { OrdersService } from './../../../service/order_service/orders.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,11 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class GetOrderComponent implements OnInit {
   constructor(private orders: OrdersService) {}
   orderData: any = [];
-
+  // dtOptions: Settings = {};
   // dtOptions: DataTables.Settings = {};
   ngOnInit(): void {
     // this.dtOptions = {
-    //   pagingType: 'full8numbers',
+    //   pagingType: 'full_numbers',
     //   pageLength: 5,
     //   processing: true,
     // };
