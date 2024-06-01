@@ -22,4 +22,17 @@ export class OrdersService {
     console.log(data);
     return this.http.post(this.url, data);
   }
+
+  getOrderById(id: any) {
+    // console.log(data);
+    return this.http.get(`${this.url}/${id}`);
+  }
+  updateOrderData(id: any, data: any) {
+    // console.log(data);
+    return this.http.put(`${this.url}/${id}`, data);
+  }
+  deleteOrderData(id: any) {
+    // console.log(data);
+    return this.http.delete(`${this.url}/${id}`);
+  }
 }

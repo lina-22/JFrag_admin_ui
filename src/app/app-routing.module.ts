@@ -25,7 +25,7 @@ const routes: Routes = [
   //order details********
   { path: 'order/get', component: GetOrderComponent },
   { path: 'order/add', component: AddOrderComponent },
-  { path: 'order/edit', component: EditOrderComponent },
+  { path: 'order/edit/:id', component: EditOrderComponent },
   { path: 'order/delete', component: DeleteOrderComponent },
 ];
 

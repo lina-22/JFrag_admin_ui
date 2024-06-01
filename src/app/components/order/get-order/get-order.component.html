@@ -1,5 +1,11 @@
 <div class="all_orders">
   <div>
+    <h3>All order details</h3>
+    <h3>
+      Add Order &nbsp;<a routerLink="/order/add">
+        <i class="fa fa-plus"></i>
+      </a>
+    </h3>
     <table>
       <caption>
         Order List 2024
@@ -14,22 +20,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">xxxx</th>
-          <td>xxx</td>
-          <td>xxxx</td>
+        <tr *ngFor="let order of orderData">
+          <th scope="row">{{ order.id }}</th>
+          <td>{{ order.firstName }}</td>
+          <td>{{ order.lastName }}</td>
 
           <td>
-            <i class="fa fa-trash"></i>
+            <i (click)="deleteOrder(order.id)" class="fa fa-trash"></i>
             &nbsp;
-            <!-- <a routerLink="/order/edit/{{ order.id }}" -->
-            <i class="fa fa-edit"></i>
-            <!-- </a> -->
+            <a routerLink="/order/edit/{{ order.id }}"
+              ><i class="fa fa-edit"></i
+            ></a>
             &nbsp;
-
-            <a routerLink="/order/add">
-              <i class="fa fa-plus"></i>
-            </a>
           </td>
         </tr>
       </tbody>
