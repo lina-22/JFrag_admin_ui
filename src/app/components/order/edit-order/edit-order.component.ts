@@ -12,8 +12,14 @@ export class EditOrderComponent implements OnInit, OnDestroy {
   constructor(private order: OrdersService, private router: ActivatedRoute) {}
 
   editOrder = new FormGroup({
+    reference: new FormControl(''),
     firstName: new FormControl(''),
     lastName: new FormControl(''),
+    email: new FormControl(''),
+    address: new FormControl(''),
+    deliveryAddress: new FormControl(''),
+    phone: new FormControl(''),
+    status: new FormControl(''),
   });
 
   message: boolean = false;
@@ -24,8 +30,14 @@ export class EditOrderComponent implements OnInit, OnDestroy {
       .subscribe((result: any) => {
         console.log(result);
         this.editOrder = new FormGroup({
+          reference: new FormControl(result['reference']),
           firstName: new FormControl(result['firstName']),
           lastName: new FormControl(result['lastName']),
+          email: new FormControl(result['email']),
+          address: new FormControl(result['address']),
+          deliveryAddress: new FormControl(result['deliveryAddress']),
+          phone: new FormControl(result['phone']),
+          status: new FormControl(result['status']),
         });
       });
   }

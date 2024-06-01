@@ -26,6 +26,7 @@ import { GetOrderComponent } from './components/order/get-order/get-order.compon
 import { AddOrderComponent } from './components/order/add-order/add-order.component';
 import { DeleteOrderComponent } from './components/order/delete-order/delete-order.component';
 import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { EditOrderComponent } from './components/order/edit-order/edit-order.com
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
+    DataTablesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

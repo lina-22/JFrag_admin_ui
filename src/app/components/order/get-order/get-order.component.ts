@@ -1,3 +1,4 @@
+import DataTables from 'datatables.net';
 import { OrdersService } from './../../../service/order_service/orders.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,7 +11,13 @@ export class GetOrderComponent implements OnInit {
   constructor(private orders: OrdersService) {}
   orderData: any = [];
 
+  // dtOptions: DataTables.Settings = {};
   ngOnInit(): void {
+    // this.dtOptions = {
+    //   pagingType: 'full8numbers',
+    //   pageLength: 5,
+    //   processing: true,
+    // };
     this.orders.getAllOrder().subscribe((allData) => {
       console.log(allData);
       this.orderData = allData;
