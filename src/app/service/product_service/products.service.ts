@@ -20,6 +20,7 @@ export class ProductsService {
     console.log(data);
     return this.http.post(this.url, data);
   }
+
   getProductById(id: any) {
     // console.log(data);
     return this.http.get(`${this.url}/${id}`);

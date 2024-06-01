@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "productName": "a name",
+      "productViews": 100,
+      "imagePath": "assets/lilium.png"
+    },
+    {
+      "id": "2",
+      "productName": "another name",
+      "productViews": 200,
+      "imagePath": "assets/desert.png"
+    },
+    {
+      "id": "3",
+      "productName": "another name",
+      "productViews": 200,
+      "imagePath": "assets/lilium.png"
+    },
+    {
+      "id": "4",
+      "productName": "another name",
+      "productViews": 200,
+      "imagePath": "assets/desert.png"
+    },
+    {
+      "id": "5",
+      "productName": "another name",
+      "productViews": 200,
+      "imagePath": "assets/lilium.png"
+    }
+  ]
+}

@@ -1,34 +1,29 @@
 {
-  "products": [
+  "orders": [
     {
       "id": "1",
-      "productName": "a name",
-      "productViews": 100,
-      "imagePath": "assets/lilium.png"
+      "firstName": "a name",
+      "lastName": "b name"
     },
     {
       "id": "2",
-      "productName": "another name",
-      "productViews": 200,
-      "imagePath": "assets/desert.png"
+      "firstName": "a name",
+      "lastName": "b name"
     },
     {
       "id": "3",
-      "productName": "another name",
-      "productViews": 200,
-      "imagePath": "assets/lilium.png"
+      "firstName": "a name",
+      "lastName": "b name"
     },
     {
       "id": "4",
-      "productName": "another name",
-      "productViews": 200,
-      "imagePath": "assets/desert.png"
+      "firstName": "a name",
+      "lastName": "b name"
     },
     {
       "id": "5",
-      "productName": "another name",
-      "productViews": 200,
-      "imagePath": "assets/lilium.png"
+      "firstName": "a name",
+      "lastName": "b name"
     }
   ]
 }

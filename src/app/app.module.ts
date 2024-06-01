@@ -22,6 +22,10 @@ import { DeleteProductComponent } from './components/product/delete-product/dele
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GetOrderComponent } from './components/order/get-order/get-order.component';
+import { AddOrderComponent } from './components/order/add-order/add-order.component';
+import { DeleteOrderComponent } from './components/order/delete-order/delete-order.component';
+import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CategoryComponent,
     EditProductComponent,
     DeleteProductComponent,
+    GetOrderComponent,
+    AddOrderComponent,
+    DeleteOrderComponent,
+    EditOrderComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,87 @@
+.all_orders {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.all_orders div {
+  width: 100%;
+  max-width: 1280px;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  width: 100%;
+  color: white;
+}
+
+caption {
+  padding: 10px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 1280px;
+}
+
+thead,
+tbody,
+tfoot {
+  background-color: rgb(19, 74, 97);
+}
+
+/*👉.p_id {
+  background-color: cadetblue;
+}👈*/
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+img {
+  width: 100px;
+  height: 80px;
+}
+
+/* ------------Media queries------------------ */
+
+@media only screen and (max-width: 992px) {
+  .all_orders {
+    width: 100%;
+    max-width: 900px;
+  }
+  .all_orders div {
+    width: 200px;
+  }
+  .all_orders div table {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .all_orders {
+    width: 100px;
+  }
+  .all_orders div {
+    width: 100px;
+  }
+  .all_orders div table {
+    width: 100px;
+  }
+}

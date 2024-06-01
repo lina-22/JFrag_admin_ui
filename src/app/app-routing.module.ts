@@ -5,7 +5,12 @@ import { AddProductComponent } from './components/product/add-product/add-produc
 import { GetProductComponent } from './components/product/get-product/get-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
+
+import { GetOrderComponent } from './components/order/get-order/get-order.component';
 import { MainComponent } from './dashbord/main/main.component';
+import { DeleteOrderComponent } from './components/order/delete-order/delete-order.component';
+import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
+import { AddOrderComponent } from './components/order/add-order/add-order.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -17,6 +22,11 @@ const routes: Routes = [
   { path: 'product/add', component: AddProductComponent },
   { path: 'product/edit/:id', component: EditProductComponent },
   { path: 'product/delete', component: DeleteProductComponent },
+  //order details********
+  { path: 'order/get', component: GetOrderComponent },
+  { path: 'order/add', component: AddOrderComponent },
+  { path: 'order/edit', component: EditOrderComponent },
+  { path: 'order/delete', component: DeleteOrderComponent },
 ];
 
 @NgModule({
