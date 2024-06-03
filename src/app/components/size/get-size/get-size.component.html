@@ -1,0 +1,36 @@
+<div class="all_sizes">
+  <div>
+    <h3>All order details</h3>
+    <h3>
+      Add Order &nbsp;<a routerLink="/size/add">
+        <i class="fa fa-plus"></i>
+      </a>
+    </h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="p_id" scope="col">Id</th>
+          <th scope="col">value</th>
+
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let size of sizeData">
+          <th scope="row">{{ size.id }}</th>
+
+          <td>{{ size.value }}</td>
+
+          <td>
+            <i (click)="deleteSize(size.id)" class="fa fa-trash"></i>
+            &nbsp;
+            <a routerLink="/size/edit/{{ size.id }}"
+              ><i class="fa fa-edit"></i
+            ></a>
+            &nbsp;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

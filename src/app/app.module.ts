@@ -26,7 +26,11 @@ import { GetOrderComponent } from './components/order/get-order/get-order.compon
 import { AddOrderComponent } from './components/order/add-order/add-order.component';
 import { DeleteOrderComponent } from './components/order/delete-order/delete-order.component';
 import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
-import { DataTablesModule } from 'angular-datatables';
+
+import { EditSizeComponent } from './components/size/edit-size/edit-size.component';
+import { AddSizeComponent } from './components/size/add-size/add-size.component';
+import { DeleteSizeComponent } from './components/size/delete-size/delete-size.component';
+import { GetSizeComponent } from './components/size/get-size/get-size.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +53,10 @@ import { DataTablesModule } from 'angular-datatables';
     AddOrderComponent,
     DeleteOrderComponent,
     EditOrderComponent,
+    EditSizeComponent,
+    AddSizeComponent,
+    DeleteSizeComponent,
+    GetSizeComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +66,6 @@ import { DataTablesModule } from 'angular-datatables';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
-    DataTablesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
