@@ -18,10 +18,6 @@ export class OrdersService {
     return ++this.lastId;
   }
 
-  saveOrderData(data: any) {
-    console.log(data);
-    return this.http.post(this.url, data);
-  }
 
   getOrderById(id: any) {
     // console.log(data);
@@ -31,8 +27,5 @@ export class OrdersService {
     // console.log(data);
     return this.http.put(`${this.url}/${id}`, data);
   }
-  deleteOrderData(id: any) {
-    // console.log(data);
-    return this.http.delete(`${this.url}/${id}`);
-  }
+
 }

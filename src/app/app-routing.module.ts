@@ -14,9 +14,7 @@ import { EditCategoryComponent } from './components/category/edit-category/edit-
 import { AddCategoryComponent } from './components/category/add-category/add-category.component';
 
 import { GetOrderComponent } from './components/order/get-order/get-order.component';
-import { DeleteOrderComponent } from './components/order/delete-order/delete-order.component';
 import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
-import { AddOrderComponent } from './components/order/add-order/add-order.component';
 
 import { GetSizeComponent } from './components/size/get-size/get-size.component';
 import { DeleteSizeComponent } from './components/size/delete-size/delete-size.component';
@@ -35,9 +33,7 @@ const routes: Routes = [
   { path: 'product/delete', component: DeleteProductComponent },
   //order details********
   { path: 'order/get', component: GetOrderComponent },
-  { path: 'order/add', component: AddOrderComponent },
   { path: 'order/edit/:id', component: EditOrderComponent },
-  { path: 'order/delete', component: DeleteOrderComponent },
   //category details********
   { path: 'category/get', component: GetCategoryComponent },
   { path: 'category/add', component: AddCategoryComponent },
