@@ -53,7 +53,6 @@
 
 .input_box .input_field input::placeholder {
   color: black;
-  /* color: white; */
 }
 
 .wrapper .btn {
@@ -70,7 +69,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-
   .form_template div {
     max-width: 300px;
   }

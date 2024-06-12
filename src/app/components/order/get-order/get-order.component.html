@@ -37,12 +37,9 @@
           <td>{{ order.status }}</td>
 
           <td>
-            <i (click)="deleteOrder(order.id)" class="fa fa-trash"></i>
-            &nbsp;
             <a routerLink="/order/edit/{{ order.id }}"
               ><i class="fa fa-edit"></i
             ></a>
-            &nbsp;
           </td>
         </tr>
       </tbody>

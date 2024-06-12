@@ -18,9 +18,7 @@
       <tbody>
         <tr *ngFor="let cat of catData">
           <th scope="row">{{ cat.id }}</th>
-
           <td>{{ cat.name }}</td>
-
           <td>
             <i (click)="deleteCat(cat.id)" class="fa fa-trash"></i>
             &nbsp;

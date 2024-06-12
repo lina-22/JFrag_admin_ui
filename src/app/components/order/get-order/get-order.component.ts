@@ -25,11 +25,5 @@ export class GetOrderComponent implements OnInit {
     });
   }
 
-  deleteOrder(order_id: any) {
-    // console.log(order_id);
-    this.orders.deleteOrderData(order_id).subscribe((result) => {
-      console.log(result);
-      this.ngOnInit();
-    });
-  }
+ 
 }
