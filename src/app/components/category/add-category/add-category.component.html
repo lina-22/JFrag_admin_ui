@@ -1,0 +1,38 @@
+<div class="form_template">
+  <div>
+    <div class="wrapper">
+      <form [formGroup]="addCat" (ngSubmit)="SaveData()">
+        <h3>New Category Add</h3>
+        <div
+          *ngIf="message"
+          class="alert alert-success alert-dismissible fade show"
+          role="alert"
+        >
+          <strong>Success!</strong> Category added
+          <button
+            (click)="removeMessage()"
+            type="button"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          >
+            X
+          </button>
+        </div>
+        <div class="input_box">
+          <div class="input_field">
+            <input
+              type="text"
+              placeholder="name"
+              required
+              formControlName="name"
+            />
+          </div>
+        </div>
+        <button type="submit" [disabled]="addCat.invalid" class="btn">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+

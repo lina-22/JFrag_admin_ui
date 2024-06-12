@@ -1,20 +1,16 @@
 {
-  "sizes": [
+  "cats": [
     {
       "id": "1",
-      "value": "jfrag"
+      "name": "jfrag"
     },
     {
       "id": "2",
-      "value": "jfrag"
+      "name": "jfrag"
     },
     {
       "id": "3",
-      "value": "jfrag"
-    },
-    {
-      "id": "4",
-      "value": "jfrag"
+      "name": "jfrag"
     }
   ]
 }

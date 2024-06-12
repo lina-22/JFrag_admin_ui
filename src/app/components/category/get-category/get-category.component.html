@@ -1,8 +1,8 @@
 <div class="all_sizes">
   <div>
-    <h3>All size details</h3>
+    <h3>All cat details</h3>
     <h3>
-      Add size &nbsp;<a routerLink="/size/add">
+      Add cat &nbsp;<a routerLink="/category/add">
         <i class="fa fa-plus"></i>
       </a>
     </h3>
@@ -10,21 +10,21 @@
       <thead>
         <tr>
           <th class="p_id" scope="col">Id</th>
-          <th scope="col">value</th>
+          <th scope="col">name</th>
 
           <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let size of sizeData">
-          <th scope="row">{{ size.id }}</th>
+        <tr *ngFor="let cat of catData">
+          <th scope="row">{{ cat.id }}</th>
 
-          <td>{{ size.value }}</td>
+          <td>{{ cat.name }}</td>
 
           <td>
-            <i (click)="deleteSize(size.id)" class="fa fa-trash"></i>
+            <i (click)="deleteCat(cat.id)" class="fa fa-trash"></i>
             &nbsp;
-            <a routerLink="/size/edit/{{ size.id }}"
+            <a routerLink="/category/edit/{{ cat.id }}"
               ><i class="fa fa-edit"></i
             ></a>
             &nbsp;

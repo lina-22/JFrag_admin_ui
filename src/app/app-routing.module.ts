@@ -8,6 +8,11 @@ import { DeleteProductComponent } from './components/product/delete-product/dele
 
 import { MainComponent } from './dashbord/main/main.component';
 
+import { GetCategoryComponent } from './components/category/get-category/get-category.component';
+import { DeleteCategoryComponent } from './components/category/delete-category/delete-category.component';
+import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
+import { AddCategoryComponent } from './components/category/add-category/add-category.component';
+
 import { GetOrderComponent } from './components/order/get-order/get-order.component';
 import { DeleteOrderComponent } from './components/order/delete-order/delete-order.component';
 import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
@@ -33,6 +38,11 @@ const routes: Routes = [
   { path: 'order/add', component: AddOrderComponent },
   { path: 'order/edit/:id', component: EditOrderComponent },
   { path: 'order/delete', component: DeleteOrderComponent },
+  //category details********
+  { path: 'category/get', component: GetCategoryComponent },
+  { path: 'category/add', component: AddCategoryComponent },
+  { path: 'category/edit/:id', component: EditCategoryComponent },
+  { path: 'category/delete', component: DeleteCategoryComponent },
   //size details********
   { path: 'size/get', component: GetSizeComponent },
   { path: 'size/add', component: AddSizeComponent },

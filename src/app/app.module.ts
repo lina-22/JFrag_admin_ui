@@ -16,7 +16,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ChartModule } from 'angular-highcharts';
 import { AddProductComponent } from './components/product/add-product/add-product.component';
 import { GetProductComponent } from './components/product/get-product/get-product.component';
-import { CategoryComponent } from './components/category/category.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,6 +30,10 @@ import { EditSizeComponent } from './components/size/edit-size/edit-size.compone
 import { AddSizeComponent } from './components/size/add-size/add-size.component';
 import { DeleteSizeComponent } from './components/size/delete-size/delete-size.component';
 import { GetSizeComponent } from './components/size/get-size/get-size.component';
+import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
+import { AddCategoryComponent } from './components/category/add-category/add-category.component';
+import { DeleteCategoryComponent } from './components/category/delete-category/delete-category.component';
+import { GetCategoryComponent } from './components/category/get-category/get-category.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,6 @@ import { GetSizeComponent } from './components/size/get-size/get-size.component'
     MainComponent,
     AddProductComponent,
     GetProductComponent,
-    CategoryComponent,
     EditProductComponent,
     DeleteProductComponent,
     GetOrderComponent,
@@ -57,6 +59,10 @@ import { GetSizeComponent } from './components/size/get-size/get-size.component'
     AddSizeComponent,
     DeleteSizeComponent,
     GetSizeComponent,
+    EditCategoryComponent,
+    AddCategoryComponent,
+    DeleteCategoryComponent,
+    GetCategoryComponent,
   ],
   imports: [
     BrowserModule,
