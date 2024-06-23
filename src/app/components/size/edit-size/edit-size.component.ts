@@ -1,6 +1,6 @@
 import { SizesService } from './../../../service/size_service/size.service';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators  } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -28,13 +28,14 @@ export class EditSizeComponent implements OnInit, OnDestroy {
       });
   }
   ngOnDestroy(): void {}
+ 
   UpdateData() {
     // console.log(this.size.value);
     this.size
       .updateSizeData(this.router.snapshot.params['id'], this.editSize.value)
       .subscribe((result) => {
         console.log(result);
-        // console.log(this.editProduct.value);
+        console.log(this.editSize.value);
         this.message = true;
       });
   }
