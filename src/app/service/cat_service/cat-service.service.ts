@@ -5,7 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CatService {
- url = 'http://localhost:3000/cats';
+//  url = 'http://localhost:3000/cats';
+
+   url = 'http://localhost:8080/api/v1/categories';  
+  addurl = 'http://localhost:8080/api/v1/categories/add-category';
+  idurl = 'http://localhost:8080/api/v1/categories/category';
+  editurl = 'http://localhost:8080/api/v1/categories/update-category';
+  deleteurl = 'http://localhost:8080/api/v1/categories/category';
   constructor(private http: HttpClient) { }
 
    getAllCat() {
@@ -17,7 +23,7 @@ export class CatService {
   }
   saveCatData(data: any) {
     console.log(data);
-    return this.http.post(this.url, data);
+    return this.http.post(this.addurl, data);
   }
   getCatById(id: any) {
     return this.http.get(`${this.url}/${id}`);

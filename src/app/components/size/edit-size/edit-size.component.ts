@@ -17,11 +17,11 @@ export class EditSizeComponent implements OnInit, OnDestroy {
 
   message: boolean = false;
   ngOnInit(): void {
-    console.log(this.router.snapshot.params['id']);
+    // console.log(this.router.snapshot.params['id']);
     this.size
       .getSizeById(this.router.snapshot.params['id'])
       .subscribe((result: any) => {
-        console.log(result);
+        // console.log(result);
         this.editSize = new FormGroup({
           value: new FormControl(result['value']),
         });
