@@ -5,7 +5,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class OrdersService {
-  url = 'http://localhost:3000/orders';
+  // url = 'http://localhost:3000/orders';
+ 
+  url = 'http://localhost:8080/api/v1/orders';  
+  idurl = 'http://localhost:8080/api/v1/orders/order';
+  editurl = 'http://localhost:8080/api/v1/orders/update-order';
+  
   constructor(private http: HttpClient) {}
 
   getAllOrder() {

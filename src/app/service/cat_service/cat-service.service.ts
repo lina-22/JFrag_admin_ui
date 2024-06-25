@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class CatService {
 //  url = 'http://localhost:3000/cats';
 
-   url = 'http://localhost:8080/api/v1/categories';  
+  url = 'http://localhost:8080/api/v1/categories';  
   addurl = 'http://localhost:8080/api/v1/categories/add-category';
   idurl = 'http://localhost:8080/api/v1/categories/category';
   editurl = 'http://localhost:8080/api/v1/categories/update-category';

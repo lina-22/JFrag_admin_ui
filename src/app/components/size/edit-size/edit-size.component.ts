@@ -14,7 +14,7 @@ export class EditSizeComponent implements OnInit, OnDestroy {
   editSize = new FormGroup({
     value: new FormControl(''),
   });
-
+sizeId = null;
   message: boolean = false;
   ngOnInit(): void {
     // console.log(this.router.snapshot.params['id']);
@@ -26,16 +26,20 @@ export class EditSizeComponent implements OnInit, OnDestroy {
           value: new FormControl(result['value']),
         });
       });
+      this.sizeId = this.router.snapshot.params['id'];
   }
   ngOnDestroy(): void {}
  
   UpdateData() {
     // console.log(this.size.value);
+    let updatedSize = {
+      "id": this.sizeId,
+      "value" : this.editSize.value.value
+    }
     this.size
-      .updateSizeData(this.router.snapshot.params['id'], this.editSize.value)
-      .subscribe((result) => {
+      .updateSizeData(updatedSize)
+      .subscribe((result:any) => {
         console.log(result);
-        console.log(this.editSize.value);
         this.message = true;
       });
   }
