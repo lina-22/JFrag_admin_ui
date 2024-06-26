@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class CatService {
   addurl = 'http://localhost:8080/api/v1/categories/add-category';
   idurl = 'http://localhost:8080/api/v1/categories/category';
   editurl = 'http://localhost:8080/api/v1/categories/update-category';
-  deleteurl = 'http://localhost:8080/api/v1/categories/category';
+  // deleteurl = 'http://localhost:8080/api/v1/categories/category';
   constructor(private http: HttpClient) { }
 
    getAllCat() {
@@ -28,10 +29,16 @@ export class CatService {
   getCatById(id: any) {
     return this.http.get(`${this.url}/${id}`);
   }
-  updateCatData(id: any, data: any) {
-    return this.http.put(`${this.url}/${id}`, data);
+
+    updateCatData(data: any):Observable<any> {
+     console.log(data);
+      // {headers, responseType: 'text' as 'json'}
+    return this.http.put(`${this.editurl}`, data,  {responseType: 'text' as 'json'});
   }
+  // updateCatData(id: any, data: any) {
+  //   return this.http.put(`${this.url}/${id}`, data);
+  // }
   deleteCatData(id: any) {
-    return this.http.delete(`${this.url}/${id}`);
+    return this.http.delete(`${this.idurl}/${id}`);
   }
 }

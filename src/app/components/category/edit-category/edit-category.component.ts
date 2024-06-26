@@ -15,6 +15,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy{
     name: new FormControl(''),
   });
 
+  catId = null;
    message: boolean = false;
   ngOnInit(): void {
     this.cat
@@ -24,16 +25,22 @@ export class EditCategoryComponent implements OnInit, OnDestroy{
           name: new FormControl(result['name']),
         });
       });
+      this.catId = this.router.snapshot.params['id'];
   }
   ngOnDestroy(): void {}
 
   UpdateData() {
-    // console.log(this.size.value);
+    // console.log(this.cat.name);
+      let updatedCat = {
+      "id": this.catId,
+      "name" : this.editCat.value.name
+      // console.log(this.editCat);
+    }
     this.cat
-      .updateCatData(this.router.snapshot.params['id'], this.editCat.value)
-      .subscribe((result) => {
+      .updateCatData(updatedCat)
+      .subscribe((result:any) => {
         console.log(result);
-        // console.log(this.editProduct.value);
+      
         this.message = true;
       });
   }
