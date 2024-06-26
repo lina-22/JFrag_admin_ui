@@ -32,6 +32,7 @@ import { EditCategoryComponent } from './components/category/edit-category/edit-
 import { AddCategoryComponent } from './components/category/add-category/add-category.component';
 import { DeleteCategoryComponent } from './components/category/delete-category/delete-category.component';
 import { GetCategoryComponent } from './components/category/get-category/get-category.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { GetCategoryComponent } from './components/category/get-category/get-cat
     AddCategoryComponent,
     DeleteCategoryComponent,
     GetCategoryComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
