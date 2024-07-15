@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { TopWidgetsComponent } from './dashbord/top-widgets/top-widgets.component';
@@ -19,7 +18,7 @@ import { GetProductComponent } from './components/product/get-product/get-produc
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GetOrderComponent } from './components/order/get-order/get-order.component';
 import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
@@ -33,11 +32,11 @@ import { AddCategoryComponent } from './components/category/add-category/add-cat
 import { DeleteCategoryComponent } from './components/category/delete-category/delete-category.component';
 import { GetCategoryComponent } from './components/category/get-category/get-category.component';
 import { FooterComponent } from './footer/footer.component';
+import { SignInComponent } from './user/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     HeaderComponent,
     SideNavComponent,
     TopWidgetsComponent,
@@ -61,6 +60,7 @@ import { FooterComponent } from './footer/footer.component';
     DeleteCategoryComponent,
     GetCategoryComponent,
     FooterComponent,
+    SignInComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +69,12 @@ import { FooterComponent } from './footer/footer.component';
     ChartModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     NgbModule,
+  ],
+  exports: [
+    // other exports,
+    SignInComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+// import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from './login/login.component';
 import { AddProductComponent } from './components/product/add-product/add-product.component';
 import { GetProductComponent } from './components/product/get-product/get-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
@@ -20,10 +21,12 @@ import { GetSizeComponent } from './components/size/get-size/get-size.component'
 import { DeleteSizeComponent } from './components/size/delete-size/delete-size.component';
 import { EditSizeComponent } from './components/size/edit-size/edit-size.component';
 import { AddSizeComponent } from './components/size/add-size/add-size.component';
+import { SignInComponent } from './user/sign-in/sign-in.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
   // { path: 'login', component: LoginComponent },
+  { path: 'signin', component: SignInComponent },
 
   // { path: '**', component: LoginComponent },
   { path: '', component: MainComponent },
