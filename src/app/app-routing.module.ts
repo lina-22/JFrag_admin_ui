@@ -26,7 +26,7 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
   // { path: 'login', component: LoginComponent },
-  { path: 'signin', component: SignInComponent },
+  { path: 'login', component: SignInComponent },
 
   // { path: '**', component: LoginComponent },
   { path: '', component: MainComponent },
