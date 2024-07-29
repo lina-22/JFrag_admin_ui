@@ -8,9 +8,15 @@
     </button>
     Logo
   </div>
-  <!-- working for menu burger end -->
   <div class="user_info">
-    <div class="user">Jahanara</div>
+    <span *ngIf="userName"
+      >Welcome, {{ userName }}!
+      <button (click)="logout()">Logout</button>
+    </span>
+    <span *ngIf="!userName">
+      <a routerLink="/sign-in">Login</a>
+    </span>
+
     <div class="user-image">JH</div>
   </div>
 </div>

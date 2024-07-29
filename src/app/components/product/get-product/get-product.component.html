@@ -8,16 +8,20 @@
         <tr>
           <th class="p_id" scope="col">Id</th>
           <th scope="col">Product Name</th>
-          <th scope="col">Views</th>
+          <th scope="col">Category</th>
+          <th scope="col">ingredient</th>
+          <th scope="col">description</th>
           <th scope="col">Image</th>
-          <th scope="col">Action</th>
+          <th scope="col">Action..</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of productData">
+        <tr *ngFor="let product of productData.content">
           <th scope="row">{{ product.id }}</th>
-          <td>{{ product.productName }}</td>
-          <td>{{ product.productViews }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.ingredient }}</td>
+          <td>{{ product.description }}</td>
           <td><img [src]="product.imagePath" alt="" /></td>
           <td>
             <i (click)="deleteProduct(product.id)" class="fa fa-trash"></i>
@@ -28,12 +32,12 @@
           </td>
         </tr>
       </tbody>
-      <tfoot>
+      <!-- <tfoot>
         <tr>
           <th scope="row" colspan="3">Average product</th>
           <td>33</td>
         </tr>
-      </tfoot>
+      </tfoot> -->
     </table>
   </div>
 </div>

@@ -1,0 +1,43 @@
+<div class="main">
+  <!-- login form -->
+  <div class="form_wrapper animate__animated animate__fadeIn" >
+    <div class="form_header">
+      <h3>
+        S'identifier
+      </h3>
+    </div>
+    <form #logInForm="ngForm" (ngSubmit)="logInForm.form.valid  && signIn(logInForm.value)" novalidate>
+      <section class="left">
+        <div
+          class="input_group"
+          [ngClass]="{ 'has-error': logInForm.submitted && !email.valid }"
+        >
+          <input
+            type="text"
+            placeholder="E-mail *"
+            name="email"
+            [(ngModel)]="userToLogIn.email"
+            #email="ngModel"
+            onfocus="this.value=''"
+            required
+          />
+          <span class="warning_msg" *ngIf="logInForm.submitted && !userToLogIn.email"
+            >Adresse mail est obligatoire</span
+          >
+        </div>
+        <div class="input_group">
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="userToLogIn.password"
+            password="ngModel"
+            placeholder="Mot de passe *"
+            onfocus="this.value=''"
+            required
+          />
+        </div>
+      </section>
+    <button>submit</button>
+    </form>
+  </div>
+</div>
