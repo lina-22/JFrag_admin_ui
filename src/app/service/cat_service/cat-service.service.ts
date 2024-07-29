@@ -9,10 +9,10 @@ export class CatService {
   //  url = 'http://localhost:3000/cats';
 
   url = 'http://localhost:8080/api/v1/categories';
-  addurl = 'http://localhost:8080/api/v1/categories/add-category';
+  addurl = 'http://localhost:8080/api/v1/categories/admin/add-category';
   idurl = 'http://localhost:8080/api/v1/categories/admin/category';
   editurl = 'http://localhost:8080/api/v1/categories/admin/update-category';
-  // deleteurl = 'http://localhost:8080/api/v1/categories/category';
+  deleteurl = 'http://localhost:8080/api/v1/categories/admin/category';
   constructor(private http: HttpClient) {}
 
   getAllCat() {

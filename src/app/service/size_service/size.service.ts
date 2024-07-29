@@ -8,9 +8,10 @@ import { Observable } from 'rxjs';
 export class SizesService {
   // url = 'http://localhost:3000/sizes';
   url = 'http://localhost:8080/api/v1/sizes/admin';
-  addurl = 'http://localhost:8080/api/v1/sizes/add-size';
-  idurl = 'http://localhost:8080/api/v1/sizes/size';
-  editurl = 'http://localhost:8080/api/v1/sizes/update-size';
+  addurl = 'http://localhost:8080/api/v1/sizes/admin/add-size';
+  idurl = 'http://localhost:8080/api/v1/sizes/admin/size';
+  editurl = 'http://localhost:8080/api/v1/sizes/admin/update-size';
+  deleteurl = 'http://localhost:8080/api/v1/sizes/admin/size';
   constructor(private http: HttpClient) {}
 
   getAllSize() {
@@ -41,6 +42,6 @@ export class SizesService {
   }
   deleteSizeData(id: any) {
     // console.log(data);
-    return this.http.delete(`${this.idurl}/${id}`);
+    return this.http.delete(`${this.deleteurl}/${id}`);
   }
 }
