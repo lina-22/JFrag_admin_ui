@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class OrdersService {
   // url = 'http://localhost:3000/orders';
- 
-  url = 'http://localhost:8080/api/v1/orders';  
+
+  url = 'localhost:8080/api/v1/orders/restricted/admin';
   idurl = 'http://localhost:8080/api/v1/orders/order';
   editurl = 'http://localhost:8080/api/v1/orders/update-order';
-  
+
   constructor(private http: HttpClient) {}
 
   getAllOrder() {
@@ -23,7 +23,6 @@ export class OrdersService {
     return ++this.lastId;
   }
 
-
   getOrderById(id: any) {
     // console.log(data);
     return this.http.get(`${this.url}/${id}`);
@@ -32,5 +31,4 @@ export class OrdersService {
     // console.log(data);
     return this.http.put(`${this.url}/${id}`, data);
   }
-
 }

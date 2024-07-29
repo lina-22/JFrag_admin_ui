@@ -19,6 +19,8 @@
           <th scope="col">Delivery Address</th>
           <th scope="col">Phone</th>
           <th scope="col">Status</th>
+          <th scope="col">createdAt</th>
+          <th scope="col">updatedAt</th>
 
           <th scope="col">Action</th>
         </tr>
@@ -26,8 +28,7 @@
       <tbody>
         <tr *ngFor="let order of orderData">
           <th scope="row">{{ order.id }}</th>
-
-          <td>{{ order.reference }}</td>
+          <td>{{ order.orderRef }}</td>
           <td>{{ order.firstName }}</td>
           <td>{{ order.lastName }}</td>
           <td>{{ order.email }}</td>
@@ -35,6 +36,8 @@
           <td>{{ order.deliveryAddress }}</td>
           <td>{{ order.phone }}</td>
           <td>{{ order.status }}</td>
+          <td>{{ order.createdAt }}</td>
+          <td>{{ order.updatedAt }}</td>
 
           <td>
             <a routerLink="/order/edit/{{ order.id }}"

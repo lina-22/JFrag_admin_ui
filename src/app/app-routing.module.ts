@@ -21,7 +21,7 @@ import { GetSizeComponent } from './components/size/get-size/get-size.component'
 import { DeleteSizeComponent } from './components/size/delete-size/delete-size.component';
 import { EditSizeComponent } from './components/size/edit-size/edit-size.component';
 import { AddSizeComponent } from './components/size/add-size/add-size.component';
-import { SignInComponent } from './user/sign-in/sign-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },

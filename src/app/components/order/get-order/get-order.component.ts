@@ -14,16 +14,9 @@ export class GetOrderComponent implements OnInit {
   // dtOptions: Settings = {};
   // dtOptions: DataTables.Settings = {};
   ngOnInit(): void {
-    // this.dtOptions = {
-    //   pagingType: 'full_numbers',
-    //   pageLength: 5,
-    //   processing: true,
-    // };
     this.orders.getAllOrder().subscribe((allData) => {
       console.log(allData);
       this.orderData = allData;
     });
   }
-
- 
 }

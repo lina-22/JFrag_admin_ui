@@ -32,7 +32,7 @@ import { AddCategoryComponent } from './components/category/add-category/add-cat
 import { DeleteCategoryComponent } from './components/category/delete-category/delete-category.component';
 import { GetCategoryComponent } from './components/category/get-category/get-category.component';
 import { FooterComponent } from './footer/footer.component';
-import { SignInComponent } from './user/sign-in/sign-in.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +74,7 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
   ],
   exports: [
     // other exports,
-    SignInComponent
+    SignInComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
