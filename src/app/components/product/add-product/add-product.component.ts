@@ -1,5 +1,11 @@
 import { ProductsService } from '../../../service/product_service/products.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+  EventEmitter,
+  Output,
+} from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -9,12 +15,14 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AddProductComponent implements OnInit, OnDestroy {
   constructor(private product: ProductsService) {}
+  @Output() close = new EventEmitter<void>();
 
   addProduct = new FormGroup({
     productName: new FormControl(''),
     productViews: new FormControl(''),
     productImage: new FormControl(''),
   });
+
   message: boolean = false;
   ngOnInit(): void {}
   ngOnDestroy(): void {}
@@ -25,9 +33,14 @@ export class AddProductComponent implements OnInit, OnDestroy {
       this.message = true;
       this.addProduct.reset({});
       const newProductId = this.product.getNextId();
+      // Optionally close the modal after a successful save
+      setTimeout(() => this.closeModal(), 2000);
     });
   }
 
+  closeModal() {
+    this.close.emit();
+  }
   removeMessage() {
     this.message = false;
   }

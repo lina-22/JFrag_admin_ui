@@ -18,6 +18,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./edit-category.component.css'],
 })
 export class EditCategoryComponent implements OnInit, OnDestroy, OnChanges {
+  constructor(private cat: CatService, private router: Router) {}
   @Input() category: any = null;
   @Output() close = new EventEmitter<void>();
 
@@ -27,8 +28,13 @@ export class EditCategoryComponent implements OnInit, OnDestroy, OnChanges {
 
   message: boolean = false;
 
-  constructor(private cat: CatService, private router: Router) {}
-
+  populateForm(): void {
+    if (this.category) {
+      this.editCat.patchValue({
+        name: this.category.name,
+      });
+    }
+  }
   ngOnInit(): void {
     this.populateForm();
   }
@@ -40,14 +46,6 @@ export class EditCategoryComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnDestroy(): void {}
-
-  populateForm(): void {
-    if (this.category) {
-      this.editCat.patchValue({
-        name: this.category.name,
-      });
-    }
-  }
 
   UpdateData() {
     let updatedCat = {

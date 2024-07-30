@@ -1,33 +1,36 @@
-<div class="form_template">
-  <div>
-    <div class="wrapper">
-      <form [formGroup]="addProduct" (ngSubmit)="SaveData()">
-        <h3>New Product Add</h3>
-        <div
-          *ngIf="message"
-          class="alert alert-success alert-dismissible fade show"
-          role="alert"
-        >
-          <strong>Success!</strong> Product added
-          <button
-            (click)="removeMessage()"
-            type="button"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          >
-            X
-          </button>
-        </div>
-        <div class="input_box">
-          <div class="input_field">
-            <input
-              type="text"
-              placeholder="Product Name"
-              required
-              formControlName="productName"
-            />
-          </div>
-          <!-- <div class="input_field">
+<div class="modal">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">&times;</span>
+    <div class="form_template">
+      <div>
+        <div class="wrapper">
+          <form [formGroup]="addProduct" (ngSubmit)="SaveData()">
+            <h3>New Product Add</h3>
+            <div
+              *ngIf="message"
+              class="alert alert-success alert-dismissible fade show"
+              role="alert"
+            >
+              <strong>Success!</strong> Product added
+              <button
+                (click)="removeMessage()"
+                type="button"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              >
+                X
+              </button>
+            </div>
+            <div class="input_box">
+              <div class="input_field">
+                <input
+                  type="text"
+                  placeholder="Product Name"
+                  required
+                  formControlName="productName"
+                />
+              </div>
+              <!-- <div class="input_field">
           <input
             type="text"
             placeholder="Product Description"
@@ -35,22 +38,24 @@
             formControlName="productDescription"
           />
         </div> -->
-          <div class="input_field">
-            <input
-              type="text"
-              placeholder="Product Views"
-              required
-              formControlName="productViews"
-            />
-          </div>
-          <div class="input_field">
-            <input type="text" placeholder="Product Image" />
-          </div>
+              <div class="input_field">
+                <input
+                  type="text"
+                  placeholder="Product Views"
+                  required
+                  formControlName="productViews"
+                />
+              </div>
+              <div class="input_field">
+                <input type="text" placeholder="Product Image" />
+              </div>
+            </div>
+            <button type="submit" [disabled]="addProduct.invalid" class="btn">
+              Submit
+            </button>
+          </form>
         </div>
-        <button type="submit" [disabled]="addProduct.invalid" class="btn">
-          Submit
-        </button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

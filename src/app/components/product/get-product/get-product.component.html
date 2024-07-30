@@ -1,5 +1,6 @@
 <div class="all_products">
   <div>
+    <h3>All Product details</h3>
     <table>
       <caption>
         Product List 2024
@@ -24,11 +25,16 @@
           <td>{{ product.description }}</td>
           <td><img [src]="product.imagePath" alt="" /></td>
           <td>
+            <a (click)="toggleAddProductPopup()">
+              <i class="fa fa-plus"></i>
+            </a>
+            &nbsp;
             <i (click)="deleteProduct(product.id)" class="fa fa-trash"></i>
             &nbsp;
-            <a routerLink="/product/edit/{{ product.id }}"
-              ><i class="fa fa-edit"></i
-            ></a>
+            <a (click)="toggleEditProductPopup(product)">
+              <i class="fa fa-edit"></i>
+            </a>
+            &nbsp;
           </td>
         </tr>
       </tbody>
@@ -41,3 +47,13 @@
     </table>
   </div>
 </div>
+<app-add-product
+  *ngIf="showAddProductPopup"
+  (close)="toggleAddProductPopup()"
+></app-add-product>
+
+<app-edit-product
+  *ngIf="showEditProductPopup"
+  [product]="selectedProd"
+  (close)="toggleEditProductPopup()"
+></app-edit-product>

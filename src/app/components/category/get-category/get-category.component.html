@@ -1,12 +1,6 @@
 <div class="all_sizes">
   <div>
     <h3>All cat details</h3>
-    <h3>
-      Add cat &nbsp;
-      <a (click)="toggleAddCategoryPopup()">
-        <i class="fa fa-plus"></i>
-      </a>
-    </h3>
     <table class="table">
       <thead>
         <tr>
@@ -20,6 +14,10 @@
           <th scope="row">{{ cat.id }}</th>
           <td>{{ cat.name }}</td>
           <td>
+            <a (click)="toggleAddCategoryPopup()">
+              <i class="fa fa-plus"></i>
+            </a>
+            &nbsp;
             <i (click)="deleteCat(cat.id)" class="fa fa-trash"></i>
             &nbsp;
             <a (click)="toggleEditCategoryPopup(cat)">

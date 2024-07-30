@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GetProductComponent } from '../../components/product/get-product/get-product.component';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -28,9 +29,17 @@ export class ProductsService {
     // console.log(data);
     return this.http.get(`${this.url}/product/${id}`);
   }
-  updateProductData(id: any, data: any) {
-    // console.log(data);
-    return this.http.put(`${this.url}/${id}`, data);
+  // updateProductData(id: any, data: any) {
+  //   // console.log(data);
+  //   return this.http.put(`${this.url}/${id}`, data);
+  // }
+
+  updateProductData(data: any): Observable<any> {
+    console.log(data);
+    // {headers, responseType: 'text' as 'json'}
+    return this.http.put(`${this.url}`, data, {
+      responseType: 'text' as 'json',
+    });
   }
   deleteProductData(id: any) {
     // console.log(data);
