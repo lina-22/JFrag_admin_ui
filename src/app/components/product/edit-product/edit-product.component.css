@@ -40,7 +40,7 @@
 .form_template {
   width: 100%;
   /* max-width: 1280px; */
-  background-color: rgb(28, 53, 28);
+  background-color: rgb(173, 180, 173);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -106,6 +106,7 @@
   color: #333;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {

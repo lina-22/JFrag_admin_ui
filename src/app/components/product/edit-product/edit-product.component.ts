@@ -23,8 +23,10 @@ export class EditProductComponent implements OnInit, OnDestroy {
 
   editProduct = new FormGroup({
     productName: new FormControl(''),
-    productViews: new FormControl(''),
-    productImage: new FormControl(''),
+    productCategory: new FormControl(''),
+    productIngredient: new FormControl(''),
+    productDescription: new FormControl(''),
+    productImage: new FormControl(null),
   });
   message: boolean = false;
   populateForm(): void {
@@ -33,6 +35,11 @@ export class EditProductComponent implements OnInit, OnDestroy {
         productName: this.product.productName,
       });
     }
+  }
+  onFileSelected(event: any) {
+    const file = event.target.files[0];
+    this.editProduct.patchValue({ productImage: file });
+    this.editProduct.get('productImage')!.updateValueAndValidity();
   }
   ngOnInit(): void {
     this.populateForm();

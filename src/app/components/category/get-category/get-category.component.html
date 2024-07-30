@@ -6,7 +6,13 @@
         <tr>
           <th class="p_id" scope="col">Id</th>
           <th scope="col">name</th>
-          <th scope="col">Action</th>
+          <th scope="col">
+            Action &nbsp;
+            <a (click)="toggleAddCategoryPopup()">
+              <i class="fa fa-plus"></i>
+            </a>
+            &nbsp;
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -14,10 +20,6 @@
           <th scope="row">{{ cat.id }}</th>
           <td>{{ cat.name }}</td>
           <td>
-            <a (click)="toggleAddCategoryPopup()">
-              <i class="fa fa-plus"></i>
-            </a>
-            &nbsp;
             <i (click)="deleteCat(cat.id)" class="fa fa-trash"></i>
             &nbsp;
             <a (click)="toggleEditCategoryPopup(cat)">

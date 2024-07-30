@@ -30,25 +30,39 @@
                   formControlName="productName"
                 />
               </div>
-              <!-- <div class="input_field">
-          <input
-            type="text"
-            placeholder="Product Description"
-            required
-            formControlName="productDescription"
-          />
-        </div> -->
               <div class="input_field">
                 <input
                   type="text"
-                  placeholder="Product Views"
+                  placeholder="Category"
                   required
-                  formControlName="productViews"
+                  formControlName="productCategory"
                 />
               </div>
               <div class="input_field">
-                <input type="text" placeholder="Product Image" />
+                <input
+                  type="text"
+                  placeholder="Ingredient"
+                  required
+                  formControlName="productIngredient"
+                />
               </div>
+              <div class="input_field">
+                <textarea
+                  type="text"
+                  placeholder="Description"
+                  required
+                  formControlName="productDescription"
+                >
+                </textarea>
+              </div>
+              <input type="file" (change)="onFileSelected($event)" />
+              <!-- <div class="input_field">
+                <input
+                  type="text"
+                  placeholder="Product Image"
+                  formControlName="productImage"
+                />
+              </div> -->
             </div>
             <button type="submit" [disabled]="addProduct.invalid" class="btn">
               Submit

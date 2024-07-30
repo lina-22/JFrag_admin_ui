@@ -10,10 +10,15 @@
           <th class="p_id" scope="col">Id</th>
           <th scope="col">Product Name</th>
           <th scope="col">Category</th>
-          <th scope="col">ingredient</th>
-          <th scope="col">description</th>
+          <th scope="col">Ingredient</th>
+          <th scope="col">Description</th>
           <th scope="col">Image</th>
-          <th scope="col">Action..</th>
+          <th scope="col">
+            Action.. &nbsp; &nbsp;
+            <a (click)="toggleAddProductPopup()">
+              <i class="fa fa-plus"></i>
+            </a>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -25,9 +30,6 @@
           <td>{{ product.description }}</td>
           <td><img [src]="product.imagePath" alt="" /></td>
           <td>
-            <a (click)="toggleAddProductPopup()">
-              <i class="fa fa-plus"></i>
-            </a>
             &nbsp;
             <i (click)="deleteProduct(product.id)" class="fa fa-trash"></i>
             &nbsp;

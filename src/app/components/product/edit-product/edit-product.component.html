@@ -33,14 +33,29 @@
               <div class="input_field">
                 <input
                   type="text"
-                  placeholder="Product Views"
+                  placeholder="Category"
                   required
-                  formControlName="productViews"
+                  formControlName="productCategory"
                 />
               </div>
               <div class="input_field">
-                <input type="text" placeholder="Product Image" />
+                <input
+                  type="text"
+                  placeholder="Ingredient"
+                  required
+                  formControlName="productIngredient"
+                />
               </div>
+              <div class="input_field">
+                <textarea
+                  type="text"
+                  placeholder="Description"
+                  required
+                  formControlName="productDescription"
+                >
+                </textarea>
+              </div>
+              <input type="file" (change)="onFileSelected($event)" />
             </div>
             <button type="submit" [disabled]="editProduct.invalid" class="btn">
               Submit

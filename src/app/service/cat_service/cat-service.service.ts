@@ -37,9 +37,6 @@ export class CatService {
       responseType: 'text' as 'json',
     });
   }
-  // updateCatData(id: any, data: any) {
-  //   return this.http.put(`${this.url}/${id}`, data);
-  // }
   deleteCatData(id: any) {
     return this.http.delete(`${this.idurl}/${id}`);
   }
