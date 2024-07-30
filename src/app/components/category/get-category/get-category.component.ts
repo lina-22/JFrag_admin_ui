@@ -7,6 +7,7 @@ import { CatService } from './../../../service/cat_service/cat-service.service';
   styleUrl: './get-category.component.css',
 })
 export class GetCategoryComponent implements OnInit {
+  constructor(private cat: CatService) {}
   showAddCategoryPopup = false;
   showEditCategoryPopup = false;
   selectedCat: any = null;
@@ -19,7 +20,6 @@ export class GetCategoryComponent implements OnInit {
     this.selectedCat = cat || null;
     this.showEditCategoryPopup = !this.showEditCategoryPopup;
   }
-  constructor(private cat: CatService) {}
   catData: any = [];
   ngOnInit(): void {
     this.cat.getAllCat().subscribe((allData) => {

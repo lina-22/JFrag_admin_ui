@@ -1,12 +1,48 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----------------------------old here */
 .form_template {
   width: 100%;
   /* max-width: 1280px; */
-  /* background-color: green; */
-  /* height: 1440px; */
-  background-image: url("../../../../assets/product/bag_2.jpg");
+  background-color: rgb(173, 180, 173);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-size: auto 400%; */
   display: flex;
   justify-content: center;
 }
@@ -14,16 +50,12 @@
 .form_template div {
   width: 100%;
   max-width: 1280px;
-  /* text-align: center; */
-  /* background-color: yellow; */
 }
 .wrapper {
   width: 750px;
   height: 400px;
-  /* background: rgb(60, 45, 60); */
   border-radius: 10px;
   color: white;
-  /* color: black; */
   padding: 40px 35px 55px;
 }
 
@@ -38,14 +70,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* background: slateblue; */
 }
 
 .input_box .input_field {
   position: relative;
   width: 48%;
   height: 50px;
-  /*👉  background: salman;👈*/
   margin: 12px 2px;
 }
 
@@ -53,19 +83,16 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  /* border: 2px solid rgba(255, 255, 255, 0.2); */
   border: 2px solid black;
   outline: none;
   font-size: 16px;
   color: black;
-  /* color: white; */
   border-radius: 6px;
   padding: 15px 15px 15px 40px;
 }
 
 .input_box .input_field input::placeholder {
   color: black;
-  /* color: white; */
 }
 
 .wrapper .btn {
@@ -79,13 +106,13 @@
   color: #333;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {
   /* Menu burgger to do */
   .form_template div {
     max-width: 300px;
-    /* background-color: rgb(230, 186, 173); */
   }
 
   .wrapper,
@@ -98,28 +125,10 @@
   }
 
   .input_box .input_field {
-    /*👉  position: relative;
-    width: 48%;
-    height: 50px;
-    background: salman;
-    margin: 12px 2px;👈*/
-    /*👉 display: grid;
-    grid-template-columns: 1fr;👈*/
     background-color: pink;
   }
 
   .input_box .input_field input {
-    /*👉display: grid;
-    grid-template-columns: 1fr;👈*/
-    /*👉  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  outline: none;
-  font-size: 16px;
-  color: white;
-  border-radius: 6px;
-  padding: 15px 15px 15px 40px;👈*/
     background-color: red;
   }
 }
