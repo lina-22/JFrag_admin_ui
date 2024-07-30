@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// import { LoginComponent } from './login/login.component';
-//import { LoginComponent } from './login/login.component';
 import { AddProductComponent } from './components/product/add-product/add-product.component';
 import { GetProductComponent } from './components/product/get-product/get-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
@@ -26,8 +24,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 const routes: Routes = [
   // { path: '', redirectTo: 'login', pathMatch: 'full' },
   // { path: 'login', component: LoginComponent },
-  { path: 'login', component: SignInComponent },
-
+  { path: 'sign-in', component: SignInComponent },
   // { path: '**', component: LoginComponent },
   { path: '', component: MainComponent },
   { path: 'product/get', component: GetProductComponent },
@@ -42,6 +39,7 @@ const routes: Routes = [
   { path: 'category/add', component: AddCategoryComponent },
   { path: 'category/edit/:id', component: EditCategoryComponent },
   { path: 'category/delete', component: DeleteCategoryComponent },
+  { path: '**', redirectTo: 'category' }, // Wildcard route for a 404 page
   //size details********
   { path: 'size/get', component: GetSizeComponent },
   { path: 'size/add', component: AddSizeComponent },

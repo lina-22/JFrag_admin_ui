@@ -2,7 +2,8 @@
   <div>
     <h3>All cat details</h3>
     <h3>
-      Add cat &nbsp;<a routerLink="/category/add">
+      Add cat &nbsp;
+      <a (click)="toggleAddCategoryPopup()">
         <i class="fa fa-plus"></i>
       </a>
     </h3>
@@ -11,7 +12,6 @@
         <tr>
           <th class="p_id" scope="col">Id</th>
           <th scope="col">name</th>
-
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -22,9 +22,9 @@
           <td>
             <i (click)="deleteCat(cat.id)" class="fa fa-trash"></i>
             &nbsp;
-            <a routerLink="/category/edit/{{ cat.id }}"
-              ><i class="fa fa-edit"></i
-            ></a>
+            <a (click)="toggleEditCategoryPopup(cat)">
+              <i class="fa fa-edit"></i>
+            </a>
             &nbsp;
           </td>
         </tr>
@@ -32,3 +32,13 @@
     </table>
   </div>
 </div>
+
+<app-add-category
+  *ngIf="showAddCategoryPopup"
+  (close)="toggleAddCategoryPopup()"
+></app-add-category>
+<app-edit-category
+  *ngIf="showEditCategoryPopup"
+  [category]="selectedCat"
+  (close)="toggleEditCategoryPopup()"
+></app-edit-category>

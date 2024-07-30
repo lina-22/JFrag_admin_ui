@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.authenticationService.logout();
     this.userName = '';
-    this.router.navigate(['login']);
+    this.router.navigate(['sign-in']);
   }
   //----------
   onToggleNav() {
