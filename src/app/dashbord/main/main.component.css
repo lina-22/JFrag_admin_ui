@@ -1,55 +1,25 @@
 /* *----------------Top section----------------- * */
 
-.widget {
-  height: 350px;
-  background-color: #fff;
-  border-radius: 5px;
-  margin: 10px;
-  box-shadow: 5px 5px 5px #939393;
-}
-
 /* *----------------bottom section----------------- * */
 .bottom_section {
-  display: flex;
-  justify-content: space-between;
-  .widget {
-    height: 250px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin: 10px;
-    box-shadow: 5px 5px 5px #939393;
-    &.left {
-      width: 670px;
-      @media only screen and (max-width: 1200px) {
-        width: 570px;
-      }
-    }
-    &.right {
-      width: 670px;
-      @media only screen and (max-width: 1600px) {
-        width: 570px;
-      }
-      /*👉  @media only screen and (max-width: 1500px) {
-        width: 470px;
-      }
-      @media only screen and (max-width: 1400px) {
-        width: 370px;
-      }
-      @media only screen and (max-width: 1200px) {
-        width: 370px;
-      }👈*/
-    }
-  }
+  /* display: flex;
+  justify-content: space-between; */
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .bottom_section .bottom_left {
-  width: 670px;
+  max-width: 670px;
 }
 .bottom_section .bottom_right {
-  width: 670px;
+  max-width: 670px;
 }
 /* Media quaries */
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .middle_section,
   .top_section,
   .bottom_section {
@@ -76,7 +46,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .middle_section {
     display: grid;
     grid-template-columns: 1fr;
@@ -90,14 +60,17 @@
   .middle_right {
     max-width: 300px;
   }
-  .bottom_section {
-    max-width: 500px;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
 
   .bottom_left,
   .bottom_right {
     max-width: 300px;
+  }
+
+  .bottom_section {
+    width: 100%;
+    max-width: 300px;
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

@@ -1,3 +1,18 @@
 .chart_container {
-  padding: 20px;
+  /* border: 2px solid black; */
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+@media only screen and (max-width: 992px) {
+  .chart_container {
+    /* border: 2px solid red; */
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
 }

@@ -1,4 +1,4 @@
-.header {
+.footer {
   height: 70px;
   padding: 20px 50px;
   background-color: rgb(1, 38, 69);
@@ -9,51 +9,14 @@
   width: 100%;
   max-width: 2200px;
 }
-.logo {
-  display: flex;
-  gap: 1em;
-}
-
-.logo_btn {
-  display: none;
-}
-.user_info {
-  display: flex;
-}
-.user {
-  align-items: center;
-  font-weight: bold;
-}
-.user-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-  background-color: rgb(11, 107, 185);
-  margin-left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  margin-top: -15px;
-}
-
-/* <!-- working for menu burger --> */
 
 @media (max-width: 992px) {
-  /* <!-- working for menu burger --> */
-  .logo_btn {
-    display: block;
-  }
-
-  .header {
+  .footer {
     max-width: 100%;
   }
 }
 @media (max-width: 600px) {
-  /* <!-- working for menu burger --> */
-
-  .header {
+  .footer {
     max-width: 100%;
   }
 }
