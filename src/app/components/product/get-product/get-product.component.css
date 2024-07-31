@@ -63,8 +63,9 @@ img {
 
 @media only screen and (max-width: 992px) {
   .all_products {
-    width: 100%;
-    max-width: 900px;
+    /* width: 100%;
+    max-width: 900px; */
+    width: 100px;
   }
   .all_products div {
     width: 200px;
@@ -82,5 +83,8 @@ img {
   }
   .all_products div table {
     width: 100px;
+  }
+  .mob {
+    display: none;
   }
 }

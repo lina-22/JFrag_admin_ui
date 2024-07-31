@@ -1,4 +1,10 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 import { SizesService } from './../../../service/size_service/size.service';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -9,6 +15,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrl: './add-size.component.css',
 })
 export class AddSizeComponent implements OnInit, OnDestroy {
+  @Output() close = new EventEmitter<void>();
   constructor(private size: SizesService) {}
 
   addSize = new FormGroup({
@@ -24,9 +31,12 @@ export class AddSizeComponent implements OnInit, OnDestroy {
       this.message = true;
       this.addSize.reset({});
       const newOrderId = this.size.getNextId();
+      setTimeout(() => this.closeModal(), 2000);
     });
   }
-
+  closeModal() {
+    this.close.emit();
+  }
   removeMessage() {
     this.message = false;
   }

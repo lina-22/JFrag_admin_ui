@@ -1,11 +1,15 @@
 .all_sizes {
   display: flex;
   width: 100%;
+  max-width: 500px;
   justify-content: center;
+  margin-inline: auto;
+  padding-top: 100px;
 }
 .all_sizes div {
   width: 100%;
-  max-width: 1280px;
+  text-align: center;
+  /* max-width: 1280px; */
 }
 table {
   border-collapse: collapse;
@@ -30,9 +34,6 @@ tfoot {
   background-color: rgb(19, 74, 97);
 }
 
-/*👉.p_id {
-  background-color: cadetblue;
-}👈*/
 th,
 td {
   border: 1px solid rgb(160 160 160);
@@ -58,30 +59,4 @@ tfoot td {
 img {
   width: 100px;
   height: 80px;
-}
-
-/* ------------Media queries------------------ */
-
-@media only screen and (max-width: 992px) {
-  .all_sizes {
-    width: 100%;
-    max-width: 900px;
-  }
-  .all_sizes div {
-    width: 200px;
-  }
-  .all_sizes div table {
-    width: 200px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .all_size {
-    width: 100px;
-  }
-  .all_size div {
-    width: 100px;
-  }
-  .all_size div table {
-    width: 100px;
-  }
 }

@@ -84,4 +84,8 @@ img {
   .all_orders div table {
     width: 100px;
   }
+
+  .mob {
+    display: none;
+  }
 }

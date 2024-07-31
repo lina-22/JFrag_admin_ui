@@ -9,14 +9,19 @@ import { SizesService } from './../../../service/size_service/size.service';
 export class GetSizeComponent implements OnInit {
   constructor(private size: SizesService) {}
   sizeData: any = [];
+  showAddSizePopup = false;
+  showEditSizePopup = false;
+  selectedSize: any = null;
   // dtOptions: Settings = {};
   // dtOptions: DataTables.Settings = {};
+  toggleAddSizePopup(): void {
+    this.showAddSizePopup = !this.showAddSizePopup;
+  }
+  toggleEditSizePopup(size?: any): void {
+    this.selectedSize = size || null;
+    this.showEditSizePopup = !this.showEditSizePopup;
+  }
   ngOnInit(): void {
-    // this.dtOptions = {
-    //   pagingType: 'full_numbers',
-    //   pageLength: 5,
-    //   processing: true,
-    // };
     this.size.getAllSize().subscribe((allData) => {
       console.log(allData);
       this.sizeData = allData;
