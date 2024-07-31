@@ -15,6 +15,10 @@
   gap: 1em;
 }
 
+.logo span {
+  font-size: 30px;
+}
+
 .logo_btn {
   display: none;
 }

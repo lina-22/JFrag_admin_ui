@@ -9,7 +9,6 @@
 .all_sizes div {
   width: 100%;
   text-align: center;
-  /* max-width: 1280px; */
 }
 table {
   border-collapse: collapse;

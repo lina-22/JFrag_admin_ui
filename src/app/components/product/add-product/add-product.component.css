@@ -39,7 +39,7 @@
 /* ----------------------------old here */
 .form_template {
   width: 100%;
-  background-color: rgb(104, 127, 104);
+  background-color: rgb(135, 167, 171);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -60,7 +60,7 @@
 
 .wrapper h3 {
   background-color: rgb(56, 48, 48);
-  font-size: 36px;
+  font-size: 26px;
   text-align: center;
   margin-bottom: 20px;
 }

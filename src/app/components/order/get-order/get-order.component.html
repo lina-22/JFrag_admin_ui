@@ -1,11 +1,6 @@
 <div class="all_orders">
   <div>
     <h3>All order details</h3>
-    <h3>
-      Add Order &nbsp;<a routerLink="/order/add">
-        <i class="fa fa-plus"></i>
-      </a>
-    </h3>
     <table class="table">
       <thead>
         <tr>
@@ -49,3 +44,9 @@
     </table>
   </div>
 </div>
+
+<!-- <app-edit-order
+  *ngIf="showEditOrderPopup"
+  [order]="selectedOrder"
+  (close)="toggleEditOrderPopup()"
+></app-edit-order> -->
