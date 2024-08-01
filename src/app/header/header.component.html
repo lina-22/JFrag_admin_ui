@@ -6,14 +6,18 @@
     </button>
   </div>
   <div class="user_info">
-    <span *ngIf="userName"
-      >Welcome, {{ userName }}!
-      <button (click)="logout()">Logout</button>
+    Welcome,
+    <span class="alluser_info" *ngIf="userName">
+      <div class="user-image"><fa-icon [icon]="faUser"></fa-icon></div>
+      {{ userName }}!
+      <button (click)="logout()">
+        <fa-icon [icon]="faSignOutAlt"></fa-icon>
+      </button>
     </span>
     <span *ngIf="!userName">
-      <a routerLink="/sign-in">Login</a>
+      <a routerLink="/sign-in"> <fa-icon [icon]="faSignInAlt"></fa-icon></a>
     </span>
 
-    <div class="user-image">JH</div>
+    <!-- <div class="user-image"><fa-icon [icon]="faUser"></fa-icon></div> -->
   </div>
 </div>

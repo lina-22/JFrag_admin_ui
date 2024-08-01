@@ -24,23 +24,32 @@
 }
 .user_info {
   display: flex;
+  justify-content: end;
+  width: 300px;
+}
+
+.alluser_info {
+  display: flex;
+}
+.alluser_info button {
+  margin-left: 20px;
 }
 .user {
   align-items: center;
   font-weight: bold;
 }
 .user-image {
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 2px solid #fff;
   background-color: rgb(11, 107, 185);
-  margin-left: 20px;
+  margin-inline: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  margin-top: -15px;
+  /* margin-top: -15px; */
 }
 
 /* <!-- working for menu burger --> */
