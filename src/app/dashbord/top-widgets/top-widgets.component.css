@@ -18,16 +18,16 @@
   color: white;
 }
 .green {
-  background-color: rgb(4, 67, 66);
+  background-color: rgba(2, 43, 42, 0.887);
 }
 .yellow {
-  background-color: rgb(237, 158, 32);
+  background-color: rgba(111, 107, 5, 0.681);
 }
 .red {
-  background-color: rgb(126, 5, 5);
+  background-color: rgba(109, 5, 5, 0.858);
 }
 .blue {
-  background-color: rgb(105, 32, 251);
+  background-color: rgba(20, 3, 53, 0.801);
 }
 .icon {
   width: 100px;
