@@ -29,7 +29,6 @@ import { DeleteSizeComponent } from './components/size/delete-size/delete-size.c
 import { GetSizeComponent } from './components/size/get-size/get-size.component';
 import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
 import { AddCategoryComponent } from './components/category/add-category/add-category.component';
-import { DeleteCategoryComponent } from './components/category/delete-category/delete-category.component';
 import { GetCategoryComponent } from './components/category/get-category/get-category.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -57,7 +56,6 @@ import { SignInComponent } from './sign-in/sign-in.component';
     GetSizeComponent,
     EditCategoryComponent,
     AddCategoryComponent,
-    DeleteCategoryComponent,
     GetCategoryComponent,
     FooterComponent,
     SignInComponent,
@@ -72,10 +70,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     FormsModule,
     NgbModule,
   ],
-  exports: [
-    // other exports,
-    SignInComponent,
-  ],
+  exports: [SignInComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

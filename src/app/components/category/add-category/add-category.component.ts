@@ -16,6 +16,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AddCategoryComponent implements OnInit, OnDestroy {
   @Output() close = new EventEmitter<void>();
+  @Output() categoryAdded = new EventEmitter<void>(); // EventEmitter to notify parent component
   constructor(private cat: CatService) {}
 
   addCat = new FormGroup({
@@ -32,6 +33,7 @@ export class AddCategoryComponent implements OnInit, OnDestroy {
       this.message = true;
       this.addCat.reset({});
       const newOrderId = this.cat.getNextId();
+      this.categoryAdded.emit(); // Emit event on successful save
       // Optionally close the modal after a successful save
       setTimeout(() => this.closeModal(), 2000);
     });

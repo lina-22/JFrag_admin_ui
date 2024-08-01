@@ -15,18 +15,18 @@ export class CatService {
   deleteurl = 'http://localhost:8080/api/v1/categories/admin/category';
   constructor(private http: HttpClient) {}
 
-  getAllCat() {
+  getAllCat(): Observable<any> {
     return this.http.get(this.url);
   }
   private lastId: number = 0;
   getNextId(): number {
     return ++this.lastId;
   }
-  saveCatData(data: any) {
+  saveCatData(data: any): Observable<any> {
     console.log(data);
     return this.http.post(this.addurl, data);
   }
-  getCatById(id: any) {
+  getCatById(id: any): Observable<any> {
     return this.http.get(`${this.idurl}/${id}`);
   }
 
@@ -37,7 +37,9 @@ export class CatService {
       responseType: 'text' as 'json',
     });
   }
-  deleteCatData(id: any) {
-    return this.http.delete(`${this.idurl}/${id}`);
+  deleteCatData(id: any): Observable<any> {
+    return this.http.delete(`${this.idurl}/${id}`, {
+      responseType: 'text' as 'json',
+    });
   }
 }

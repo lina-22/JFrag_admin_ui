@@ -36,6 +36,7 @@
 <app-add-category
   *ngIf="showAddCategoryPopup"
   (close)="toggleAddCategoryPopup()"
+  (categoryAdded)="refreshCategoryList()"
 ></app-add-category>
 <app-edit-category
   *ngIf="showEditCategoryPopup"

@@ -8,10 +8,27 @@ import { CatService } from './../../../service/cat_service/cat-service.service';
 })
 export class GetCategoryComponent implements OnInit {
   constructor(private cat: CatService) {}
+
   showAddCategoryPopup = false;
   showEditCategoryPopup = false;
   selectedCat: any = null;
-  catData: any = [];
+  catData: any[] = [];
+
+  // Refresh the list
+  loadCategories() {
+    this.cat.getAllCat().subscribe((data: any) => {
+      this.catData = data;
+    });
+    // console.log('Categories loaded:', this.catData); // Debug log
+  }
+
+  ngOnInit(): void {
+    this.loadCategories();
+  }
+
+  refreshCategoryList() {
+    this.loadCategories();
+  }
 
   toggleAddCategoryPopup(): void {
     this.showAddCategoryPopup = !this.showAddCategoryPopup;
@@ -20,18 +37,17 @@ export class GetCategoryComponent implements OnInit {
     this.selectedCat = cat || null;
     this.showEditCategoryPopup = !this.showEditCategoryPopup;
   }
-  ngOnInit(): void {
-    this.cat.getAllCat().subscribe((allData) => {
-      console.log(allData);
-      this.catData = allData;
-    });
-  }
 
+  // Delete a category
   deleteCat(cat_id: any) {
-    // console.log(cat_id);
-    this.cat.deleteCatData(cat_id).subscribe((result) => {
-      console.log(result);
-      this.ngOnInit();
-    });
+    this.cat.deleteCatData(cat_id).subscribe(
+      (result) => {
+        // console.log('Delete result:', result);
+        this.refreshCategoryList();
+      },
+      (error) => {
+        console.error('Delete error:', error);
+      }
+    );
   }
 }
