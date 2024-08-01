@@ -21,6 +21,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy, OnChanges {
   constructor(private cat: CatService, private router: Router) {}
   @Input() category: any = null;
   @Output() close = new EventEmitter<void>();
+  @Output() categoryUpdated = new EventEmitter<void>(); // EventEmitter to notify parent component
 
   editCat = new FormGroup({
     name: new FormControl(''),
@@ -56,6 +57,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy, OnChanges {
     this.cat.updateCatData(updatedCat).subscribe((result: any) => {
       console.log(result);
       this.message = true;
+      this.categoryUpdated.emit(); // Emit event on successful update
       // Optionally close the modal after a successful save
       setTimeout(() => this.closeModal(), 2000);
     });

@@ -42,4 +42,5 @@
   *ngIf="showEditCategoryPopup"
   [category]="selectedCat"
   (close)="toggleEditCategoryPopup()"
+  (categoryUpdated)="onCategoryUpdated()"
 ></app-edit-category>

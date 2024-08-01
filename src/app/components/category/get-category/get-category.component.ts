@@ -38,6 +38,10 @@ export class GetCategoryComponent implements OnInit {
     this.showEditCategoryPopup = !this.showEditCategoryPopup;
   }
 
+  // Handle category update event
+  onCategoryUpdated() {
+    this.refreshCategoryList(); // Refresh the list when a category is updated
+  }
   // Delete a category
   deleteCat(cat_id: any) {
     this.cat.deleteCatData(cat_id).subscribe(
