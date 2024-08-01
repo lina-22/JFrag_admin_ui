@@ -1,37 +1,42 @@
-<div class="form_template">
-  <div>
-    <div class="wrapper">
-      <form [formGroup]="editSize" (ngSubmit)="UpdateData()">
-        <h3>Update Size</h3>
-        <div
-          *ngIf="message"
-          class="alert alert-success alert-dismissible fade show"
-          role="alert"
-        >
-          <strong>Success!</strong> Size updated
-          <button
-            (click)="removeMessage()"
-            type="button"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          >
-            X
-          </button>
+<div class="modal">
+  <div class="modal-content">
+    <span class="close-button" (click)="closeModal()">&times;</span>
+    <div class="form_template">
+      <div>
+        <div class="wrapper">
+          <form [formGroup]="editSize" (ngSubmit)="UpdateData()">
+            <h3>Update Size</h3>
+            <div
+              *ngIf="message"
+              class="alert alert-success alert-dismissible fade show"
+              role="alert"
+            >
+              <strong>Success!</strong> Size updated
+              <button
+                (click)="removeMessage()"
+                type="button"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              >
+                X
+              </button>
+            </div>
+            <div class="input_box">
+              <div class="input_field">
+                <input
+                  type="number"
+                  placeholder="Value"
+                  required
+                  formControlName="value"
+                />
+              </div>
+            </div>
+            <button type="submit" [disabled]="editSize.invalid" class="btn">
+              Submit
+            </button>
+          </form>
         </div>
-        <div class="input_box">
-          <div class="input_field">
-            <input
-              type="number"
-              placeholder="Value"
-              required
-              formControlName="value"
-            />
-          </div>
-        </div>
-        <button type="submit" [disabled]="editSize.invalid" class="btn">
-          Submit
-        </button>
-      </form>
+      </div>
     </div>
   </div>
 </div>

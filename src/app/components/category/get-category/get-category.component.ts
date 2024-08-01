@@ -11,7 +11,7 @@ export class GetCategoryComponent implements OnInit {
   showAddCategoryPopup = false;
   showEditCategoryPopup = false;
   selectedCat: any = null;
-  // selectedCatId: string | null = null;
+  catData: any = [];
 
   toggleAddCategoryPopup(): void {
     this.showAddCategoryPopup = !this.showAddCategoryPopup;
@@ -20,7 +20,6 @@ export class GetCategoryComponent implements OnInit {
     this.selectedCat = cat || null;
     this.showEditCategoryPopup = !this.showEditCategoryPopup;
   }
-  catData: any = [];
   ngOnInit(): void {
     this.cat.getAllCat().subscribe((allData) => {
       console.log(allData);

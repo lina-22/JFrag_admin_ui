@@ -2,10 +2,12 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-inline: auto;
+  padding-top: 50px;
 }
 .all_products div {
   width: 100%;
-  max-width: 1280px;
+  text-align: center;
 }
 table {
   border-collapse: collapse;
@@ -29,9 +31,6 @@ tfoot {
   background-color: rgb(228 240 245);
 }
 
-/*👉.p_id {
-  background-color: cadetblue;
-}👈*/
 th,
 td {
   border: 1px solid rgb(160 160 160);
@@ -61,26 +60,8 @@ img {
 
 /* ------------Media queries------------------ */
 
-@media only screen and (max-width: 992px) {
-  .all_products {
-    width: 100%;
-    max-width: 900px;
-  }
-  .all_products div {
-    width: 200px;
-  }
-  .all_products div table {
-    width: 200px;
-  }
-}
 @media only screen and (max-width: 600px) {
-  .all_products {
-    width: 100px;
-  }
-  .all_products div {
-    width: 100px;
-  }
-  .all_products div table {
-    width: 100px;
+  .mob {
+    display: none;
   }
 }

@@ -1,12 +1,20 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { AuthenticationService } from '../service/auth_service/authentication.service';
 import { Router } from '@angular/router';
+import {
+  faSignOutAlt,
+  faSignInAlt,
+  faUser,
+} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent implements OnInit {
+  faSignOutAlt = faSignOutAlt;
+  faSignInAlt = faSignInAlt;
+  faUser = faUser;
   @Output() isNav: EventEmitter<boolean> = new EventEmitter<boolean>();
   togglerMenu = false;
   userName: string = '';

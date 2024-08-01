@@ -19,7 +19,8 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  max-width: 500px;
+  max-width: 400px;
+  height: 300px;
 }
 
 .close-button {
@@ -37,48 +38,36 @@
 }
 
 /* ----------------------------old here */
-.form_template {
-  width: 100%;
-  /* background-image: url("../../../../assets/product/bag_2.jpg"); */
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-}
 
 .form_template div {
   width: 100%;
-  max-width: 1280px;
-}
-.wrapper {
-  width: 750px;
-  height: 400px;
-  border-radius: 10px;
-  color: white;
-  padding: 40px 35px 55px;
+  max-width: 680px;
 }
 
 .wrapper h3 {
-  background-color: rgb(56, 48, 48);
-  font-size: 36px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.wrapper .input_box {
+.wrapper .input_box,
+.input_field {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .input_box .input_field {
   position: relative;
-  width: 48%;
-  height: 50px;
+  width: 100%;
+  height: 40px;
   margin: 12px 2px;
+  text-align: center;
 }
 
 .input_box .input_field input {
+  text-align: center;
   width: 100%;
   height: 100%;
   background: transparent;
@@ -105,27 +94,4 @@
   color: #333;
   font-weight: 600;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 600px) {
-  .form_template div {
-    max-width: 300px;
-  }
-
-  .wrapper,
-  .input_box {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .wrapper h3 {
-    font-size: 24px;
-  }
-
-  .input_box .input_field {
-    background-color: pink;
-  }
-
-  .input_box .input_field input {
-    background-color: red;
-  }
 }

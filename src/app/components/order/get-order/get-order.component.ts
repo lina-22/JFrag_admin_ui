@@ -10,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetOrderComponent implements OnInit {
   constructor(private orders: OrdersService) {}
+  showEditOrderPopup = false;
+  selectedOrder: any = null;
   orderData: any = [];
+
+  toggleEditOrderPopup(orders?: any): void {
+    this.selectedOrder = orders || null;
+    this.showEditOrderPopup = !this.showEditOrderPopup;
+  }
+
   // dtOptions: Settings = {};
   // dtOptions: DataTables.Settings = {};
   ngOnInit(): void {

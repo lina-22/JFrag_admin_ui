@@ -9,10 +9,10 @@
         <tr>
           <th class="p_id" scope="col">Id</th>
           <th scope="col">Product Name</th>
-          <th scope="col">Category</th>
+          <th class="mob" scope="col">Category</th>
           <th scope="col">Ingredient</th>
-          <th scope="col">Description</th>
-          <th scope="col">Image</th>
+          <th class="mob" scope="col">Description</th>
+          <th class="mob" scope="col">Image</th>
           <th scope="col">
             Action.. &nbsp; &nbsp;
             <a (click)="toggleAddProductPopup()">
@@ -25,10 +25,10 @@
         <tr *ngFor="let product of productData.content">
           <th scope="row">{{ product.id }}</th>
           <td>{{ product.name }}</td>
-          <td>{{ product.category }}</td>
+          <td class="mob">{{ product.category }}</td>
           <td>{{ product.ingredient }}</td>
-          <td>{{ product.description }}</td>
-          <td><img [src]="product.imagePath" alt="" /></td>
+          <td class="mob">{{ product.description }}</td>
+          <td class="mob"><img [src]="product.imagePath" alt="" /></td>
           <td>
             &nbsp;
             <i (click)="deleteProduct(product.id)" class="fa fa-trash"></i>

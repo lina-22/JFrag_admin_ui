@@ -1,26 +1,21 @@
 <div class="all_orders">
   <div>
     <h3>All order details</h3>
-    <h3>
-      Add Order &nbsp;<a routerLink="/order/add">
-        <i class="fa fa-plus"></i>
-      </a>
-    </h3>
     <table class="table">
       <thead>
         <tr>
           <th class="p_id" scope="col">Id</th>
 
           <th scope="col">Reference</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Email</th>
-          <th scope="col">Address</th>
-          <th scope="col">Delivery Address</th>
+          <th class="mob" scope="col">First Name</th>
+          <th class="mob" scope="col">Last Name</th>
+          <th class="mob" scope="col">Email</th>
+          <th class="mob" scope="col">Address</th>
+          <th class="mob" scope="col">Delivery Address</th>
           <th scope="col">Phone</th>
           <th scope="col">Status</th>
-          <th scope="col">createdAt</th>
-          <th scope="col">updatedAt</th>
+          <th class="mob" scope="col">createdAt</th>
+          <th class="mob" scope="col">updatedAt</th>
 
           <th scope="col">Action</th>
         </tr>
@@ -29,15 +24,15 @@
         <tr *ngFor="let order of orderData">
           <th scope="row">{{ order.id }}</th>
           <td>{{ order.orderRef }}</td>
-          <td>{{ order.firstName }}</td>
-          <td>{{ order.lastName }}</td>
-          <td>{{ order.email }}</td>
-          <td>{{ order.address }}</td>
-          <td>{{ order.deliveryAddress }}</td>
+          <td class="mob">{{ order.firstName }}</td>
+          <td class="mob">{{ order.lastName }}</td>
+          <td class="mob">{{ order.email }}</td>
+          <td class="mob">{{ order.address }}</td>
+          <td class="mob">{{ order.deliveryAddress }}</td>
           <td>{{ order.phone }}</td>
           <td>{{ order.status }}</td>
-          <td>{{ order.createdAt }}</td>
-          <td>{{ order.updatedAt }}</td>
+          <td class="mob">{{ order.createdAt }}</td>
+          <td class="mob">{{ order.updatedAt }}</td>
 
           <td>
             <a routerLink="/order/edit/{{ order.id }}"
@@ -49,3 +44,9 @@
     </table>
   </div>
 </div>
+
+<!-- <app-edit-order
+  *ngIf="showEditOrderPopup"
+  [order]="selectedOrder"
+  (close)="toggleEditOrderPopup()"
+></app-edit-order> -->

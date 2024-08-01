@@ -8,6 +8,11 @@ import {
   faChartBar,
   faContactBook,
   faHand,
+  faTags,
+  faRuler,
+  faShoppingCart,
+  faUser,
+  faExchangeAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -24,6 +29,11 @@ export class SideNavComponent {
   faChartBar = faChartBar;
   faContactBook = faContactBook;
   faHand = faHand;
+  faTags = faTags;
+  faRuler = faRuler;
+  faShoppingCart = faShoppingCart;
+  faUser = faUser;
+  faExchangeAlt = faExchangeAlt;
 
   onMenuClick() {
     console.log('menu clicked...');

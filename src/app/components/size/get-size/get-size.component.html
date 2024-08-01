@@ -1,18 +1,19 @@
 <div class="all_sizes">
   <div>
     <h3>All size details</h3>
-    <h3>
-      Add size &nbsp;<a routerLink="/size/add">
-        <i class="fa fa-plus"></i>
-      </a>
-    </h3>
     <table class="table">
       <thead>
         <tr>
           <th class="p_id" scope="col">Id</th>
           <th scope="col">value</th>
 
-          <th scope="col">Action</th>
+          <th scope="col">
+            Action &nbsp;
+            <a (click)="toggleAddSizePopup()">
+              <i class="fa fa-plus"></i>
+            </a>
+            &nbsp;
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +25,7 @@
           <td>
             <i (click)="deleteSize(size.id)" class="fa fa-trash"></i>
             &nbsp;
-            <a routerLink="/size/edit/{{ size.id }}"
+            <a (click)="toggleEditSizePopup(size)"
               ><i class="fa fa-edit"></i
             ></a>
             &nbsp;
@@ -34,3 +35,13 @@
     </table>
   </div>
 </div>
+
+<app-add-category
+  *ngIf="showAddSizePopup"
+  (close)="toggleAddSizePopup()"
+></app-add-category>
+<app-edit-category
+  *ngIf="showEditSizePopup"
+  [category]="selectedSize"
+  (close)="toggleEditSizePopup()"
+></app-edit-category>
