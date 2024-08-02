@@ -25,7 +25,6 @@ import { EditOrderComponent } from './components/order/edit-order/edit-order.com
 
 import { EditSizeComponent } from './components/size/edit-size/edit-size.component';
 import { AddSizeComponent } from './components/size/add-size/add-size.component';
-import { DeleteSizeComponent } from './components/size/delete-size/delete-size.component';
 import { GetSizeComponent } from './components/size/get-size/get-size.component';
 import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
 import { AddCategoryComponent } from './components/category/add-category/add-category.component';
@@ -52,7 +51,6 @@ import { SignInComponent } from './sign-in/sign-in.component';
     EditOrderComponent,
     EditSizeComponent,
     AddSizeComponent,
-    DeleteSizeComponent,
     GetSizeComponent,
     EditCategoryComponent,
     AddCategoryComponent,

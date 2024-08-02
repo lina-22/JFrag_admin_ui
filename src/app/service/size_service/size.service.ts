@@ -14,7 +14,7 @@ export class SizesService {
   deleteurl = 'http://localhost:8080/api/v1/sizes/admin/size';
   constructor(private http: HttpClient) {}
 
-  getAllSize() {
+  getAllSize(): Observable<any> {
     return this.http.get(this.url);
   }
 
@@ -24,12 +24,12 @@ export class SizesService {
     return ++this.lastId;
   }
 
-  saveSizeData(data: any) {
+  saveSizeData(data: any): Observable<any> {
     console.log(data);
     return this.http.post(this.addurl, data);
   }
 
-  getSizeById(id: any) {
+  getSizeById(id: any): Observable<any> {
     // console.log(data);
     return this.http.get(`${this.idurl}/${id}`);
   }
@@ -40,8 +40,10 @@ export class SizesService {
       responseType: 'text' as 'json',
     });
   }
-  deleteSizeData(id: any) {
+  deleteSizeData(id: any): Observable<any> {
     // console.log(data);
-    return this.http.delete(`${this.deleteurl}/${id}`);
+    return this.http.delete(`${this.deleteurl}/${id}`, {
+      responseType: 'text' as 'json',
+    });
   }
 }

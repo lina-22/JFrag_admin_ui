@@ -36,12 +36,14 @@
   </div>
 </div>
 
-<app-add-category
+<app-add-size
   *ngIf="showAddSizePopup"
   (close)="toggleAddSizePopup()"
-></app-add-category>
-<app-edit-category
+  (sizeAdded)="refreshSizeList()"
+></app-add-size>
+<app-edit-size
   *ngIf="showEditSizePopup"
-  [category]="selectedSize"
+  [sizeIn]="selectedSize"
   (close)="toggleEditSizePopup()"
-></app-edit-category>
+  (sizeUpdated)="onSizeUpdated()"
+></app-edit-size>

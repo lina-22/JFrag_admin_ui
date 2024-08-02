@@ -16,6 +16,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AddSizeComponent implements OnInit, OnDestroy {
   @Output() close = new EventEmitter<void>();
+  @Output() sizeAdded = new EventEmitter<void>();
   constructor(private size: SizesService) {}
 
   addSize = new FormGroup({
@@ -24,6 +25,7 @@ export class AddSizeComponent implements OnInit, OnDestroy {
   message: boolean = false;
   ngOnInit(): void {}
   ngOnDestroy(): void {}
+
   SaveData() {
     // console.log(this.addProduct.value);
     this.size.saveSizeData(this.addSize.value).subscribe((result) => {
@@ -31,6 +33,7 @@ export class AddSizeComponent implements OnInit, OnDestroy {
       this.message = true;
       this.addSize.reset({});
       const newOrderId = this.size.getNextId();
+      this.sizeAdded.emit();
       setTimeout(() => this.closeModal(), 2000);
     });
   }

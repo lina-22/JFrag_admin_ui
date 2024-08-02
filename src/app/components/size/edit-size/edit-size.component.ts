@@ -20,12 +20,14 @@ export class EditSizeComponent implements OnInit, OnDestroy {
   constructor(private size: SizesService, private router: ActivatedRoute) {}
   @Input() sizeIn: any = null;
   @Output() close = new EventEmitter<void>();
+  @Output() sizeUpdated = new EventEmitter<void>();
   editSize = new FormGroup({
     value: new FormControl(''),
   });
 
   // sizeId = null;
   message: boolean = false;
+
   populateForm(): void {
     if (this.sizeIn) {
       this.editSize.patchValue({
@@ -53,6 +55,7 @@ export class EditSizeComponent implements OnInit, OnDestroy {
     this.size.updateSizeData(updatedSize).subscribe((result: any) => {
       console.log(result);
       this.message = true;
+      this.sizeUpdated.emit();
       setTimeout(() => this.closeModal(), 2000);
     });
   }

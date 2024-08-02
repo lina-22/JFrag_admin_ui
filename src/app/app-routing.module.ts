@@ -16,7 +16,6 @@ import { GetOrderComponent } from './components/order/get-order/get-order.compon
 import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
 
 import { GetSizeComponent } from './components/size/get-size/get-size.component';
-import { DeleteSizeComponent } from './components/size/delete-size/delete-size.component';
 import { EditSizeComponent } from './components/size/edit-size/edit-size.component';
 import { AddSizeComponent } from './components/size/add-size/add-size.component';
 
@@ -41,7 +40,6 @@ const routes: Routes = [
   { path: 'size/get', component: GetSizeComponent },
   { path: 'size/add', component: AddSizeComponent },
   { path: 'size/edit/:id', component: EditSizeComponent },
-  { path: 'size/delete', component: DeleteSizeComponent },
 ];
 
 @NgModule({
