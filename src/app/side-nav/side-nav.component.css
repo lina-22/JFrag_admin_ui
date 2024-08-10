@@ -20,6 +20,10 @@ a {
   text-decoration: none;
   color: white;
 }
+.active {
+  background-color: rgb(106, 106, 110);
+  font-size: 20px;
+}
 
 /* menu burger start*/
 @media (max-width: 992px) {

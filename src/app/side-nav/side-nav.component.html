@@ -2,41 +2,55 @@
   <!-- <div *ngIf="displayName; then thenBlock; eslse eslseBlock"></div> -->
   <div class="nav_item" (click)="onMenuClick()">
     <fa-icon [icon]="faDashboard"></fa-icon>
-    <span><a routerLink="">Dashbord</a></span>
-    <!-- <span><a [routerLink]="['/']">Dashbord</a></span> -->
+    <span
+      [routerLinkActive]="'active'"
+      [routerLinkActiveOptions]="{ exact: true }"
+      ><a routerLink="">Dashbord</a></span
+    >
+    <!-- <span [routerLinkActive]="'active'"
+      ><a [routerLink]="['/home']">Dashbord</a></span
+    > -->
   </div>
   <div class="nav_item">
     <fa-icon [icon]="faTags"></fa-icon>
-    <span><a routerLink="category/get"> Category</a></span>
+    <span [routerLinkActive]="'active'"
+      ><a routerLink="category/get"> Category</a></span
+    >
   </div>
   <div class="nav_item">
     <fa-icon [icon]="faRuler"></fa-icon>
-    <span><a routerLink="size/get"> Size</a></span>
+    <span [routerLinkActive]="'active'"
+      ><a routerLink="size/get"> Size</a></span
+    >
   </div>
   <div class="nav_item">
     <fa-icon [icon]="faBox"></fa-icon>
-    <span><a routerLink="product/get"> Product</a></span>
+    <span [routerLinkActive]="'active'"
+      ><a routerLink="product/get"> Product</a></span
+    >
   </div>
 
   <div class="nav_item">
     <fa-icon [icon]="faShoppingCart"></fa-icon>
-    <span><a routerLink="order/get">Orders</a></span>
+    <span [routerLinkActive]="'active'"
+      ><a routerLink="order/get">Orders</a></span
+    >
   </div>
 
   <div class="nav_item">
     <fa-icon [icon]="faUser"></fa-icon>
-    <span>Sellers</span>
+    <span [routerLinkActive]="'active'">Sellers</span>
   </div>
   <div class="nav_item">
     <fa-icon [icon]="faExchangeAlt"></fa-icon>
-    <span>Transactions</span>
+    <span [routerLinkActive]="'active'">Transactions</span>
   </div>
   <div class="nav_item">
     <fa-icon [icon]="faContactBook"></fa-icon>
-    <span>Messages</span>
+    <span [routerLinkActive]="'active'">Messages</span>
   </div>
   <div class="nav_item">
     <fa-icon [icon]="faLocation"></fa-icon>
-    <span>Location</span>
+    <span [routerLinkActive]="'active'">Location</span>
   </div>
 </div>

@@ -24,6 +24,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: '', component: MainComponent },
+  { path: 'home', component: MainComponent },
   { path: 'product/get', component: GetProductComponent },
   { path: 'product/add', component: AddProductComponent },
   { path: 'product/edit/:id', component: EditProductComponent },
