@@ -47,7 +47,7 @@ export class HeaderComponent implements OnInit {
     this.userName = '';
     this.router.navigate(['sign-in']);
   }
-  //----------
+
   onToggleNav() {
     this.togglerMenu = !this.togglerMenu;
     this.isNav.emit(this.togglerMenu);

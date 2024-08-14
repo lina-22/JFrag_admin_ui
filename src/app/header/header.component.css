@@ -49,10 +49,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  /* margin-top: -15px; */
 }
-
-/* <!-- working for menu burger --> */
 
 @media only screen and (max-width: 992px) {
   /* <!-- working for menu burger --> */

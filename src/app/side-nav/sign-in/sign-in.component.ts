@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../service/auth_service/authentication.service';
-import { MsgService } from '../service/msg_service/msg.service';
+import { AuthenticationService } from '../../service/auth_service/authentication.service';
+import { MsgService } from '../../service/msg_service/msg.service';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css'], // Note: it should be styleUrls, not styleUrl
+  styleUrl: './sign-in.component.css', // Note: it should be styleUrls, not styleUrl
+})
+@Component({
+  selector: 'app-add-category',
+  templateUrl: './add-category.component.html',
+  styleUrl: './add-category.component.css',
 })
 export class SignInComponent implements OnInit {
   userToLogIn: any = {

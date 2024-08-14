@@ -1,14 +1,11 @@
 .container {
   width: 100%;
   max-width: 2200px;
-  /* background-color: yellow; */
-  /* border: 1px solid red; */
 }
 
 .main_container {
   display: grid;
   grid-template-columns: 1fr 6fr;
-  /* border: 1px solid green; */
 }
 
 .side_nav {

@@ -9,7 +9,6 @@
   width: 100%;
   max-width: 800px;
   margin-inline: auto;
-  padding-inline: 50px;
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -19,12 +18,9 @@
 }
 .bottom_section .bottom_left {
   margin-top: 30px;
-  max-width: 670px;
   background-color: aliceblue;
 }
-.bottom_section .bottom_right {
-  max-width: 670px;
-}
+
 /* Media quaries */
 @media only screen and (max-width: 992px) {
   .top_section {
