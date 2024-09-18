@@ -20,9 +20,11 @@ import { EditSizeComponent } from './components/size/edit-size/edit-size.compone
 import { AddSizeComponent } from './components/size/add-size/add-size.component';
 
 import { SignInComponent } from './sign-in/sign-in.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
+  { path: 'registration', component: RegistrationComponent },
   { path: '', component: MainComponent },
   { path: 'home', component: MainComponent },
   { path: 'product/get', component: GetProductComponent },

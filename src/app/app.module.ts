@@ -1,3 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgModule, Inject } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,24 +16,27 @@ import { TopThreeProductsComponent } from './dashbord/top-three-products/top-thr
 import { MainComponent } from './dashbord/main/main.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ChartModule } from 'angular-highcharts';
+
 import { AddProductComponent } from './components/product/add-product/add-product.component';
 import { GetProductComponent } from './components/product/get-product/get-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
 import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { GetOrderComponent } from './components/order/get-order/get-order.component';
 import { EditOrderComponent } from './components/order/edit-order/edit-order.component';
 
 import { EditSizeComponent } from './components/size/edit-size/edit-size.component';
 import { AddSizeComponent } from './components/size/add-size/add-size.component';
 import { GetSizeComponent } from './components/size/get-size/get-size.component';
+
 import { EditCategoryComponent } from './components/category/edit-category/edit-category.component';
 import { AddCategoryComponent } from './components/category/add-category/add-category.component';
 import { GetCategoryComponent } from './components/category/get-category/get-category.component';
+
 import { FooterComponent } from './footer/footer.component';
+
 import { SignInComponent } from './sign-in/sign-in.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +63,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     GetCategoryComponent,
     FooterComponent,
     SignInComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,

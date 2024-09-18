@@ -18,9 +18,10 @@ export class GetSizeComponent implements OnInit {
   // Refresh the list
   loadSizes() {
     this.size.getAllSize().subscribe((data: any) => {
+      console.log(data);
       this.sizeData = data;
     });
-    // console.log('Categories loaded:', this.catData); // Debug log
+    console.log('sizeData loaded:', this.sizeData); // Debug log
   }
 
   ngOnInit(): void {

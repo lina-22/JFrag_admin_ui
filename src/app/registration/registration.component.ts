@@ -1,19 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../../service/auth_service/authentication.service';
-import { MsgService } from '../../service/msg_service/msg.service';
-
+import { AuthenticationService } from '../service/auth_service/authentication.service';
+import { MsgService } from '../service/msg_service/msg.service';
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrl: './sign-in.component.css', // Note: it should be styleUrls, not styleUrl
+  selector: 'app-registration',
+  templateUrl: './registration.component.html',
+  styleUrl: './registration.component.css',
 })
-@Component({
-  selector: 'app-add-category',
-  templateUrl: './add-category.component.html',
-  styleUrl: './add-category.component.css',
-})
-export class SignInComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
   userToLogIn: any = {
     email: '',
     password: '',
@@ -38,10 +32,10 @@ export class SignInComponent implements OnInit {
         (res) => {
           this.loading = false;
           this.messageService.sendMessage('vous êtes connecté');
-          console.log(
-            'res from login component : ',
-            this.authenticationService.decoded_token
-          );
+          // console.log(
+          //   'res from login component : ',
+          //   this.authenticationService.getUserDetails
+          // );
 
           // Navigate based on role or just navigate to a default route
           // if (this.authenticationService.isAdmin()) {
@@ -49,8 +43,7 @@ export class SignInComponent implements OnInit {
           // } else {
           //   this.router.navigate(['cart']);
           // }
-
-          this.router.navigate(['cart']); // Default navigation route after login
+          this.router.navigate(['']); // Default navigation route after login
         },
         (err) => {
           this.loading = false;

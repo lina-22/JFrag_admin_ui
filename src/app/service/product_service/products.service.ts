@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductsService {
-  url = 'http://localhost:8080/api/v1/products/admin';
+  url = 'http://localhost:8080/api/v1/products';
   addurl = 'http://localhost:8080/api/v1/products/admin/add-product';
   idurl = 'http://localhost:8080/api/v1/products/product';
   editurl = 'http://localhost:8080/api/v1/products/admin/update-product';
