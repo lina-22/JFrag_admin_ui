@@ -6,7 +6,7 @@
     </div>
     <!-- Message display for login feedback -->
     <div *ngIf="message" class="message-box">
-      <p>{{ message }}</p>
+      <p>{{ message }} {{ userName ? "as " + userName : "" }}</p>
     </div>
     <form
       #logInForm="ngForm"

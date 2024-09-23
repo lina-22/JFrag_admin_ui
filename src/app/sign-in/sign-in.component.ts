@@ -16,6 +16,8 @@ export class SignInComponent implements OnInit {
   message: any;
   loading = false;
 
+  userName: string = '';
+
   constructor(
     private authenticationService: AuthenticationService,
     public messageService: MsgService,
@@ -27,8 +29,14 @@ export class SignInComponent implements OnInit {
     this.messageService.message$.subscribe((message) => {
       this.message = message;
     });
-  }
 
+    // Subscribe to user details observable and get the user's name
+    this.authenticationService.userDetails$.subscribe((userDetails) => {
+      if (userDetails) {
+        this.userName = userDetails.firstName; // Set the first name to display
+      }
+    });
+  }
   signIn(formValues: any) {
     const email: string = this.userToLogIn.email;
     const password: string = this.userToLogIn.password;
