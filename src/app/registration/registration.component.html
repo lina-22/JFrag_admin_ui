@@ -16,6 +16,44 @@
         >
           <input
             type="text"
+            placeholder="First Name *"
+            name="fName"
+            [(ngModel)]="userToLogIn.email"
+            #email="ngModel"
+            onfocus="this.value=''"
+            required
+          />
+          <!-- <span
+            class="warning_msg"
+            *ngIf="logInForm.submitted && !userToLogIn.email"
+            >Adresse mail est obligatoire</span
+          > -->
+        </div>
+        <div
+          class="input_group"
+          [ngClass]="{ 'has-error': logInForm.submitted && !email.valid }"
+        >
+          <input
+            type="text"
+            placeholder="Last Name *"
+            name="lName"
+            [(ngModel)]="userToLogIn.email"
+            #email="ngModel"
+            onfocus="this.value=''"
+            required
+          />
+          <!-- <span
+            class="warning_msg"
+            *ngIf="logInForm.submitted && !userToLogIn.email"
+            >Adresse mail est obligatoire</span
+          > -->
+        </div>
+        <div
+          class="input_group"
+          [ngClass]="{ 'has-error': logInForm.submitted && !email.valid }"
+        >
+          <input
+            type="text"
             placeholder="E-mail *"
             name="email"
             [(ngModel)]="userToLogIn.email"
@@ -44,8 +82,8 @@
       <button>submit</button>
 
       <!-- ------------------ -->
-      <small>Already account</small>
-      <a routerLink="/sign-in"> create</a>
+      <small>Already have an account</small>
+      <a routerLink="/sign-in"> Log in</a>
       <!-- -------------------- -->
     </form>
   </div>

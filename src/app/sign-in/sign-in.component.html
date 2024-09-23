@@ -4,6 +4,10 @@
     <div class="form_header">
       <h3>S'identifier</h3>
     </div>
+    <!-- Message display for login feedback -->
+    <div *ngIf="message" class="message-box">
+      <p>{{ message }}</p>
+    </div>
     <form
       #logInForm="ngForm"
       (ngSubmit)="logInForm.form.valid && signIn(logInForm.value)"
