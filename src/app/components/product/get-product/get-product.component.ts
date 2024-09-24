@@ -29,11 +29,24 @@ export class GetProductComponent implements OnInit {
     });
   }
 
-  deleteProduct(product_id: any) {
-    // console.log(product_id);
-    this.prod.deleteProductData(product_id).subscribe((result) => {
-      console.log(result);
-      this.ngOnInit();
+  //   deleteProduct(product_id: any) {
+  //     // console.log(product_id);
+  //     this.prod.deleteProductData(product_id).subscribe((result) => {
+  //       console.log(result);
+  //       this.ngOnInit();
+  //     });
+  //   }
+  // }
+
+  deleteProduct(product_id: number): void {
+    this.prod.deleteProductData(product_id).subscribe({
+      next: (result) => {
+        console.log('Product deleted successfully:', result);
+        this.ngOnInit(); // Refresh the product list after deletion
+      },
+      error: (error) => {
+        console.error('Error occurred while deleting the product:', error);
+      },
     });
   }
 }

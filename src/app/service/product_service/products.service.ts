@@ -1,22 +1,43 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+} from '@angular/common/http';
 import { GetProductComponent } from '../../components/product/get-product/get-product.component';
-import { Observable } from 'rxjs';
-
+import { Observable, throwError } from 'rxjs';
+import { AuthenticationService } from '../auth_service/authentication.service';
+import { catchError, map, tap } from 'rxjs/operators'; // <-- Add this import
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  url = 'http://localhost:8080/api/v1/products';
+  // url = 'http://localhost:8080/api/v1/products';
+  url = 'http://localhost:8080/api/v1/products/admin';
   addurl = 'http://localhost:8080/api/v1/products/admin/add-product';
   idurl = 'http://localhost:8080/api/v1/products/product';
   editurl = 'http://localhost:8080/api/v1/products/admin/update-product';
   deleteurl = 'http://localhost:8080/api/v1/products/admin/product';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private authService: AuthenticationService // Inject AuthenticationService
+  ) {}
 
-  getAllProduct() {
-    return this.http.get(this.url);
+  // Helper to create headers with the token
+  private createAuthHeaders(): HttpHeaders {
+    const token = localStorage.getItem('token'); // Or get from authService
+    return new HttpHeaders({
+      Authorization: `Bearer ${token}`,
+    });
+  }
+  // Test for client product ok
+  // getAllProduct(): Observable<any> {
+  //   return this.http.get(this.url);
+  // }
+  getAllProduct(): Observable<any> {
+    const headers = this.createAuthHeaders();
+    return this.http.get(this.url, { headers });
   }
 
   private lastId: number = 0;
@@ -25,28 +46,36 @@ export class ProductsService {
     return ++this.lastId;
   }
 
-  // saveProductData(data: FormData): Observable<any> {
-  //   console.log(data);
-  //   return this.http.post(this.addurl, data);
-  // }
   saveProductData(formData: FormData): Observable<any> {
-    return this.http.post<any>(this.addurl, formData);
+    const headers = this.createAuthHeaders();
+    return this.http.post<any>(this.addurl, formData, { headers });
   }
 
-  getProductById(id: any) {
-    // console.log(data);
-    return this.http.get(`${this.idurl}/${id}`);
+  getProductById(id: any): Observable<any> {
+    const headers = this.createAuthHeaders();
+    return this.http.get(`${this.idurl}/${id}`, { headers });
   }
 
   updateProductData(data: any): Observable<any> {
-    console.log(data);
-    // {headers, responseType: 'text' as 'json'}
-    return this.http.put(`${this.editurl}`, data, {
-      responseType: 'text' as 'json',
-    });
+    const headers = this.createAuthHeaders();
+    return this.http.put(`${this.editurl}`, data, { headers });
   }
-  deleteProductData(id: any) {
-    // console.log(data);
-    return this.http.delete(`${this.idurl}/${id}`);
+
+  // deleteProductData(id: any): Observable<any> {
+  //   const headers = this.createAuthHeaders();
+  //   return this.http.delete(`${this.deleteurl}/${id}`, { headers });
+  // }
+
+  deleteProductData(id: number): Observable<any> {
+    const headers = this.createAuthHeaders();
+    return this.http.delete(`${this.deleteurl}/${id}`, { headers }).pipe(
+      tap((response) => {
+        console.log('Delete response:', response);
+      }),
+      catchError((error: HttpErrorResponse) => {
+        console.error('Delete error:', error);
+        return throwError(() => new Error('Failed to delete product.'));
+      })
+    );
   }
 }
