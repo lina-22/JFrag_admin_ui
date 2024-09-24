@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AuthenticationService } from '../auth_service/authentication.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,10 +13,22 @@ export class SizesService {
   idurl = 'http://localhost:8080/api/v1/sizes/admin/size';
   editurl = 'http://localhost:8080/api/v1/sizes/admin/update-size';
   deleteurl = 'http://localhost:8080/api/v1/sizes/admin/size';
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private authService: AuthenticationService
+  ) {}
+
+  // Helper to create headers with the token
+  private createAuthHeaders(): HttpHeaders {
+    const token = localStorage.getItem('token'); // Or get from authService
+    return new HttpHeaders({
+      Authorization: `Bearer ${token}`,
+    });
+  }
 
   getAllSize(): Observable<any> {
-    return this.http.get(this.url);
+    const headers = this.createAuthHeaders();
+    return this.http.get(this.url, { headers });
   }
 
   private lastId: number = 0;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,8 +15,16 @@ export class CatService {
   deleteurl = 'http://localhost:8080/api/v1/categories/admin/category';
   constructor(private http: HttpClient) {}
 
+  // Helper to create headers with the token
+  private createAuthHeaders(): HttpHeaders {
+    const token = localStorage.getItem('token'); // Or get from authService
+    return new HttpHeaders({
+      Authorization: `Bearer ${token}`,
+    });
+  }
   getAllCat(): Observable<any> {
-    return this.http.get(this.url);
+    const headers = this.createAuthHeaders();
+    return this.http.get(this.url, { headers });
   }
   private lastId: number = 0;
   getNextId(): number {
