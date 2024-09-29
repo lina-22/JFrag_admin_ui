@@ -4,7 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddProductComponent } from './components/product/add-product/add-product.component';
 import { GetProductComponent } from './components/product/get-product/get-product.component';
 import { EditProductComponent } from './components/product/edit-product/edit-product.component';
-import { DeleteProductComponent } from './components/product/delete-product/delete-product.component';
 
 import { MainComponent } from './dashbord/main/main.component';
 
@@ -30,7 +29,6 @@ const routes: Routes = [
   { path: 'product/get', component: GetProductComponent },
   { path: 'product/add', component: AddProductComponent },
   { path: 'product/edit/:id', component: EditProductComponent },
-  { path: 'product/delete', component: DeleteProductComponent },
   //order details********
   { path: 'order/get', component: GetOrderComponent },
   { path: 'order/edit/:id', component: EditOrderComponent },

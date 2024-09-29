@@ -66,16 +66,22 @@ export class ProductsService {
   //   return this.http.delete(`${this.deleteurl}/${id}`, { headers });
   // }
 
-  deleteProductData(id: number): Observable<any> {
+  deleteProductData(id: any): Observable<any> {
     const headers = this.createAuthHeaders();
-    return this.http.delete(`${this.deleteurl}/${id}`, { headers }).pipe(
-      tap((response) => {
-        console.log('Delete response:', response);
-      }),
-      catchError((error: HttpErrorResponse) => {
-        console.error('Delete error:', error);
-        return throwError(() => new Error('Failed to delete product.'));
+    // console.log(data);
+    return this.http
+      .delete(`${this.deleteurl}/${id}`, {
+        headers,
+        responseType: 'text' as 'json',
       })
-    );
+      .pipe(
+        tap((response) => {
+          console.log('Delete response:', response);
+        }),
+        catchError((error: HttpErrorResponse) => {
+          console.error('Delete error:', error);
+          return throwError(() => new Error('Failed to delete product.'));
+        })
+      );
   }
 }

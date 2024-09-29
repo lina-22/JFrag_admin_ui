@@ -35,7 +35,7 @@
           <td class="mob">{{ order.updatedAt }}</td>
 
           <td>
-            <a routerLink="/order/edit/{{ order.id }}"
+            <a (click)="toggleEditOrderPopup(order)"
               ><i class="fa fa-edit"></i
             ></a>
           </td>
@@ -45,8 +45,8 @@
   </div>
 </div>
 
-<!-- <app-edit-order
+<app-edit-order
   *ngIf="showEditOrderPopup"
   [order]="selectedOrder"
   (close)="toggleEditOrderPopup()"
-></app-edit-order> -->
+></app-edit-order>

@@ -38,9 +38,12 @@ export class OrdersService {
     // console.log(data);
     return this.http.get(`${this.url}/${id}`);
   }
-  updateOrderData(id: any, data: any) {
+  updateOrderData(data: any) {
     const headers = this.createAuthHeaders();
     // console.log(data);
-    return this.http.put(`${this.url}/${id}`, data);
+    return this.http.put(`${this.editurl}`, data, {
+      headers,
+      responseType: 'text' as 'json',
+    });
   }
 }

@@ -1,5 +1,13 @@
 import { OrdersService } from './../../../service/order_service/orders.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,50 +17,56 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './edit-order.component.css',
 })
 export class EditOrderComponent implements OnInit, OnDestroy {
-  constructor(private order: OrdersService, private router: ActivatedRoute) {}
+  constructor(private orderS: OrdersService, private router: ActivatedRoute) {}
+  @Input() order: any = null;
+  @Output() close = new EventEmitter<void>();
+  @Output() orderUpdated = new EventEmitter<void>();
 
   editOrder = new FormGroup({
     reference: new FormControl(''),
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    address: new FormControl(''),
-    deliveryAddress: new FormControl(''),
-    phone: new FormControl(''),
     status: new FormControl(''),
   });
 
   message: boolean = false;
-  ngOnInit(): void {
-    console.log(this.router.snapshot.params['id']);
-    this.order
-      .getOrderById(this.router.snapshot.params['id'])
-      .subscribe((result: any) => {
-        console.log(result);
-        this.editOrder = new FormGroup({
-          reference: new FormControl(result['reference']),
-          firstName: new FormControl(result['firstName']),
-          lastName: new FormControl(result['lastName']),
-          email: new FormControl(result['email']),
-          address: new FormControl(result['address']),
-          deliveryAddress: new FormControl(result['deliveryAddress']),
-          phone: new FormControl(result['phone']),
-          status: new FormControl(result['status']),
-        });
+
+  populateForm(): void {
+    console.log('Order:', this.order); // Debugging
+    if (this.order) {
+      this.editOrder.patchValue({
+        reference: this.order.orderRef,
+        status: this.order.status,
       });
+    }
   }
+  ngOnInit(): void {
+    this.populateForm();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['order'] && changes['order'].currentValue) {
+      this.populateForm();
+    }
+  }
+
   ngOnDestroy(): void {}
   UpdateData() {
-    console.log(this.editOrder.value);
-    this.order
-      .updateOrderData(this.router.snapshot.params['id'], this.editOrder.value)
-      .subscribe((result) => {
-        console.log(result);
-        // console.log(this.editProduct.value);
-        this.message = true;
-        // this.editProduct.reset({});
-        // const newProductId = this.product.getNextId();
-      });
+    let updatedOrd = {
+      id: this.order.id,
+      reference: this.order.reference,
+      status: this.order.status,
+    };
+
+    this.orderS.updateOrderData(updatedOrd).subscribe((result: any) => {
+      console.log(result);
+      this.message = true;
+      this.orderUpdated.emit(); // Emit event on successful update
+      // Optionally close the modal after a successful save
+      setTimeout(() => this.closeModal(), 2000);
+    });
+  }
+
+  closeModal() {
+    this.close.emit();
   }
 
   removeMessage() {
