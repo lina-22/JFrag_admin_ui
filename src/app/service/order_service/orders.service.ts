@@ -34,10 +34,12 @@ export class OrdersService {
   }
 
   getOrderById(id: any) {
+    const headers = this.createAuthHeaders();
     // console.log(data);
     return this.http.get(`${this.url}/${id}`);
   }
   updateOrderData(id: any, data: any) {
+    const headers = this.createAuthHeaders();
     // console.log(data);
     return this.http.put(`${this.url}/${id}`, data);
   }

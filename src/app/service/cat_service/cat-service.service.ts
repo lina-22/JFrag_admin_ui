@@ -36,6 +36,7 @@ export class CatService {
     return this.http.post(this.addurl, data, { headers });
   }
   getCatById(id: any): Observable<any> {
+    const headers = this.createAuthHeaders();
     return this.http.get(`${this.idurl}/${id}`);
   }
 

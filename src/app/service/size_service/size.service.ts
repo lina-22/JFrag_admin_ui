@@ -38,24 +38,30 @@ export class SizesService {
   }
 
   saveSizeData(data: any): Observable<any> {
+    const headers = this.createAuthHeaders();
     console.log(data);
-    return this.http.post(this.addurl, data);
+    return this.http.post(this.addurl, data, { headers });
   }
 
   getSizeById(id: any): Observable<any> {
+    const headers = this.createAuthHeaders();
     // console.log(data);
-    return this.http.get(`${this.idurl}/${id}`);
+    return this.http.get(`${this.idurl}/${id}`, { headers });
   }
   updateSizeData(data: any): Observable<any> {
     console.log(data);
+    const headers = this.createAuthHeaders();
     // {headers, responseType: 'text' as 'json'}
     return this.http.put(`${this.editurl}`, data, {
+      headers,
       responseType: 'text' as 'json',
     });
   }
   deleteSizeData(id: any): Observable<any> {
+    const headers = this.createAuthHeaders();
     // console.log(data);
     return this.http.delete(`${this.deleteurl}/${id}`, {
+      headers,
       responseType: 'text' as 'json',
     });
   }
