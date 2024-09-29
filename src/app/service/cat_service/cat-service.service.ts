@@ -31,8 +31,9 @@ export class CatService {
     return ++this.lastId;
   }
   saveCatData(data: any): Observable<any> {
+    const headers = this.createAuthHeaders();
     console.log(data);
-    return this.http.post(this.addurl, data);
+    return this.http.post(this.addurl, data, { headers });
   }
   getCatById(id: any): Observable<any> {
     return this.http.get(`${this.idurl}/${id}`);
@@ -40,13 +41,17 @@ export class CatService {
 
   updateCatData(data: any): Observable<any> {
     console.log(data);
+    const headers = this.createAuthHeaders();
     // {headers, responseType: 'text' as 'json'}
     return this.http.put(`${this.editurl}`, data, {
+      headers,
       responseType: 'text' as 'json',
     });
   }
   deleteCatData(id: any): Observable<any> {
+    const headers = this.createAuthHeaders();
     return this.http.delete(`${this.idurl}/${id}`, {
+      headers,
       responseType: 'text' as 'json',
     });
   }
