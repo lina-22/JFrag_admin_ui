@@ -65,19 +65,12 @@ img {
 /* ------------Media queries------------------ */
 
 @media only screen and (max-width: 992px) {
-  .all_orders {
-    width: 100%;
-    max-width: 900px;
-  }
-  .all_orders div {
-    width: 200px;
-  }
-  .all_orders div table {
-    width: 200px;
+  .mob {
+    display: none;
   }
 }
 @media only screen and (max-width: 600px) {
-  .all_orders {
+  /* .all_orders {
     width: 100px;
   }
   .all_orders div {
@@ -85,7 +78,7 @@ img {
   }
   .all_orders div table {
     width: 100px;
-  }
+  } */
 
   .mob {
     display: none;

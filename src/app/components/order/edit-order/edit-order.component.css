@@ -123,44 +123,18 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* Menu burgger to do */
   .form_template div {
     max-width: 300px;
-    /* background-color: rgb(230, 186, 173); */
   }
 
-  .wrapper,
-  .input_box {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
   .wrapper h3 {
     font-size: 24px;
   }
 
   .input_box .input_field {
-    /*👉  position: relative;
-    width: 48%;
-    height: 50px;
-    background: salman;
-    margin: 12px 2px;👈*/
-    /*👉 display: grid;
-    grid-template-columns: 1fr;👈*/
-    background-color: pink;
-  }
-
-  .input_box .input_field input {
-    /*👉display: grid;
-    grid-template-columns: 1fr;👈*/
-    /*👉  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  outline: none;
-  font-size: 16px;
-  color: white;
-  border-radius: 6px;
-  padding: 15px 15px 15px 40px;👈*/
-    background-color: red;
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 5px 2px;
   }
 }
