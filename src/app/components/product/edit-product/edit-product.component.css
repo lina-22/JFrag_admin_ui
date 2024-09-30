@@ -39,7 +39,7 @@
 /* ----------------------------old here */
 .form_template {
   width: 100%;
-  background-color: rgb(173, 180, 173);
+  background-color: rgb(135, 167, 171);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -82,16 +82,16 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  border: 2px solid black;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   outline: none;
   font-size: 16px;
-  color: black;
+  color: white;
   border-radius: 6px;
   padding: 15px 15px 15px 40px;
 }
 
 .input_box .input_field input::placeholder {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .wrapper .btn {
@@ -109,16 +109,10 @@
 }
 
 @media only screen and (max-width: 600px) {
-  /* Menu burgger to do */
   .form_template div {
     max-width: 300px;
   }
 
-  .wrapper,
-  .input_box {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
   .wrapper h3 {
     font-size: 24px;
   }
@@ -127,7 +121,24 @@
     background-color: pink;
   }
 
-  .input_box .input_field input {
-    background-color: red;
+  .input_box .input_field {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 5px 2px;
+  }
+  .input_field11 {
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  .main_body {
+    text-align: justify;
+  }
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: initial;
   }
 }

@@ -12,13 +12,13 @@ import { catchError, map, tap } from 'rxjs/operators'; // <-- Add this import
   providedIn: 'root',
 })
 export class ProductsService {
-  // url = 'http://localhost:8080/api/v1/products';
+  urlclient = 'http://localhost:8080/api/v1/products';
   url = 'http://localhost:8080/api/v1/products/admin';
   addurl = 'http://localhost:8080/api/v1/products/admin/add-product';
   idurl = 'http://localhost:8080/api/v1/products/product';
   editurl = 'http://localhost:8080/api/v1/products/admin/update-product';
   deleteurl = 'http://localhost:8080/api/v1/products/admin/product';
-
+  imgurl = 'http://localhost:8080/api/v1/products/admin/product';
   constructor(
     private http: HttpClient,
     private authService: AuthenticationService // Inject AuthenticationService
@@ -33,7 +33,7 @@ export class ProductsService {
   }
   // Test for client product ok
   // getAllProduct(): Observable<any> {
-  //   return this.http.get(this.url);
+  //   return this.http.get(this.urlclient);
   // }
   getAllProduct(): Observable<any> {
     const headers = this.createAuthHeaders();

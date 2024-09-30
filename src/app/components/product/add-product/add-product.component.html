@@ -4,7 +4,11 @@
     <div class="form_template">
       <div>
         <div class="wrapper">
-          <form [formGroup]="addProduct" (ngSubmit)="SaveData()">
+          <form
+            class="wrapper-form"
+            [formGroup]="addProduct"
+            (ngSubmit)="SaveData()"
+          >
             <h3>New Product Add</h3>
             <div
               *ngIf="message"
@@ -46,7 +50,7 @@
                   formControlName="productIngredient"
                 />
               </div>
-              <div class="input_field">
+              <div class="input_field11">
                 <textarea
                   type="text"
                   placeholder="Description"
