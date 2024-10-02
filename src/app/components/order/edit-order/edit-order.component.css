@@ -41,13 +41,8 @@
 
 .form_template {
   width: 100%;
-  /* max-width: 1280px; */
-  /* background-color: green; */
-  /* height: 1440px; */
-  /* background-image: url("../../../../assets/product/bag_2.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-size: auto 400%; */
   display: flex;
   justify-content: center;
 }
@@ -55,16 +50,12 @@
 .form_template div {
   width: 100%;
   max-width: 1280px;
-  /* text-align: center; */
-  /* background-color: yellow; */
 }
 .wrapper {
   width: 750px;
   height: 400px;
-  /* background: rgb(60, 45, 60); */
   border-radius: 10px;
   color: white;
-  /* color: black; */
   padding: 40px 35px 55px;
 }
 
@@ -79,14 +70,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* background: slateblue; */
 }
 
 .input_box .input_field {
   position: relative;
   width: 48%;
   height: 50px;
-  /*👉  background: salman;👈*/
   margin: 12px 2px;
 }
 
@@ -94,19 +83,16 @@
   width: 100%;
   height: 100%;
   background: transparent;
-  /* border: 2px solid rgba(255, 255, 255, 0.2); */
   border: 2px solid black;
   outline: none;
   font-size: 16px;
   color: black;
-  /* color: white; */
   border-radius: 6px;
   padding: 15px 15px 15px 40px;
 }
 
 .input_box .input_field input::placeholder {
   color: black;
-  /* color: white; */
 }
 
 .wrapper .btn {

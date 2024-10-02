@@ -32,9 +32,6 @@ tfoot {
   background-color: rgb(19, 74, 97);
 }
 
-/*👉.p_id {
-  background-color: cadetblue;
-}👈*/
 th,
 td {
   border: 1px solid rgb(160 160 160);
@@ -70,16 +67,6 @@ img {
   }
 }
 @media only screen and (max-width: 600px) {
-  /* .all_orders {
-    width: 100px;
-  }
-  .all_orders div {
-    width: 100px;
-  }
-  .all_orders div table {
-    width: 100px;
-  } */
-
   .mob {
     display: none;
   }

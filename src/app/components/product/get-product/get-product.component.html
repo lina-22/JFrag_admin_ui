@@ -29,13 +29,6 @@
           <td>{{ product.ingredient }}</td>
           <td class="mob">{{ product.description }}</td>
           <td class="mob"><img [src]="product.imagePath" alt="" /></td>
-          <!-- <td>
-            <img
-              *ngIf="product.cartImageUrl"
-              [src]="product.cartImageUrl"
-              alt="{{ product.name }}"
-            />
-          </td> -->
           <td>
             &nbsp;
             <i (click)="deleteProduct(product.id)" class="fa fa-trash"></i>
@@ -47,12 +40,6 @@
           </td>
         </tr>
       </tbody>
-      <!-- <tfoot>
-        <tr>
-          <th scope="row" colspan="3">Average product</th>
-          <td>33</td>
-        </tr>
-      </tfoot> -->
     </table>
   </div>
 </div>

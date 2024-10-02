@@ -16,23 +16,6 @@ export class AuthenticationService {
 
   constructor(private httpClient: HttpClient) {}
 
-  // signIn(userName: string, password: string): Observable<any> {
-  //   return this.httpClient
-  //     .post<any>(`${this.base_url}/auth/login`, { userName, password })
-  //     .pipe(
-  //       map((res) => {
-  //         if (res.accessToken) {
-  //           this.setUserDetails(res.userDto);
-  //           localStorage.setItem('token', res.accessToken);
-  //           localStorage.setItem('userDetails', JSON.stringify(res.userDto));
-  //           console.log(res);
-  //           return res;
-  //         }
-  //         return null;
-  //       })
-  //     );
-  // }
-
   signIn(userName: string, password: string): Observable<any> {
     return this.httpClient
       .post<any>(`${this.base_url}/auth/login`, { userName, password })

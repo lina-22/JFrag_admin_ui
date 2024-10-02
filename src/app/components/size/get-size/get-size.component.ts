@@ -55,17 +55,4 @@ export class GetSizeComponent implements OnInit {
       }
     );
   }
-  // ngOnInit(): void {
-  //   this.size.getAllSize().subscribe((allData) => {
-  //     console.log(allData);
-  //     this.sizeData = allData;
-  //   });
 }
-
-// deleteSize(size_id: any) {
-//   // console.log(size_id);
-//   this.size.deleteSizeData(size_id).subscribe((result) => {
-//     console.log(result);
-//     this.ngOnInit();
-//   });
-// }

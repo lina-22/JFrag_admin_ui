@@ -32,17 +32,6 @@ export class RegistrationComponent implements OnInit {
         (res) => {
           this.loading = false;
           this.messageService.sendMessage('vous êtes connecté');
-          // console.log(
-          //   'res from login component : ',
-          //   this.authenticationService.getUserDetails
-          // );
-
-          // Navigate based on role or just navigate to a default route
-          // if (this.authenticationService.isAdmin()) {
-          //   this.router.navigate(['admin']);
-          // } else {
-          //   this.router.navigate(['cart']);
-          // }
           this.router.navigate(['']); // Default navigation route after login
         },
         (err) => {
